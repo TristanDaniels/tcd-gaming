@@ -25,7 +25,7 @@
           <div class="col-xs-6 col-md-3">
             <h6>Contact Us</h6>
             <ul class="footer-links">
-              <li>>Send us a <a href="/contact">message</a></li>
+              <li>Send us a <a href="/contact">message</a></li>
               <li>
                 Send us an <a href="mailto: tcdgaming@gmail.com">email</a>
               </li>
@@ -47,7 +47,9 @@
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="social-icons">
               <li>
-                <a href="https://za.pinterest.com/jdmprecision/" target="_blank"
+                <a
+                  href="https://za.pinterest.com/therealtcdgaming/"
+                  target="_blank"
                   ><i class="fa-brands fa-pinterest"></i
                 ></a>
               </li>
@@ -59,13 +61,13 @@
                 ></a>
               </li>
               <li>
-                <a href="https://twitter.com/JdmPrecision" target="_blank"
+                <a href="https://twitter.com/realtcdgaming" target="_blank"
                   ><i class="fa-brands fa-twitter"></i
                 ></a>
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/jdmprecision69/"
+                  href="https://www.instagram.com/therealtcdgaming/"
                   target="_blank"
                   ><i class="fa-brands fa-instagram"></i
                 ></a>
