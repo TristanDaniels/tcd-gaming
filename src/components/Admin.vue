@@ -1,9 +1,9 @@
 <template>
   <div v-if="active" class="mod">
     <form @submit.prevent="editproducts(product.id)">
-      <div>CAR NAME</div>
+      <div>GAME NAME</div>
       <input type="text" v-model="product.title" />
-      <div>CAR CATEGORY</div>
+      <div>CATEGORY</div>
       <input type="text" v-model="product.category" />
       <div>DESCRIPTION</div>
       <input type="text" v-model="product.description" />

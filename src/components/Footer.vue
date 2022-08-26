@@ -7,20 +7,15 @@
           <div class="col-sm-12 col-md-6">
             <h6>About US</h6>
             <p class="text-justify">
-              Welcome to JDM Precision, your number one source for all things
-              Japanese-car related. We're dedicated to providing you the best of
-              cars, with a focus on dependability. customer service, and
-              authenticity. We're working to turn our passion for JDM cars into
-              a booming online store. We hope you enjoy our products as much as
-              we enjoy offering them to you.
+              This is TCD Gaming. The place that provides you with the best
+              games.
             </p>
           </div>
 
           <div class="col-xs-6 col-md-3">
             <h6>Quick Links</h6>
             <ul class="footer-links">
-              <li><a href="/about">About US</a></li>
-              <li>Head over to our <a href="/auction">Auction</a> page</li>
+              <li><a href="/about">About us</a></li>
               <li>Check out our <a href="/products">Products</a></li>
               <li>
                 Don't have an account ? Register <a href="/register">here</a>
@@ -32,9 +27,9 @@
             <ul class="footer-links">
               <li>>Send us a <a href="/contact">message</a></li>
               <li>
-                Send us an <a href="mailto: jdmprecision69@gmail.com">email</a>
+                Send us an <a href="mailto: tcdgaming@gmail.com">email</a>
               </li>
-              <li>Give us a <a href="tel:066-209-1181"> call</a></li>
+              <li>Give us a <a href="tel:065-863-4549"> call</a></li>
             </ul>
           </div>
         </div>
@@ -45,7 +40,7 @@
           <div class="col-md-8 col-sm-6 col-xs-12">
             <p class="copyright-text">
               Copyright &copy; 2022 All Rights Reserved by
-              <a href="/about">JDM Precision</a>.
+              <a href="/about">TCD Gaming</a>.
             </p>
           </div>
 
@@ -58,7 +53,7 @@
               </li>
               <li>
                 <a
-                  href="https://www.github.com/fatimagalant/node-eom/tree/frontend"
+                  href="https://github.com/TristanDaniels/tcd-gaming"
                   target="_blank"
                   ><i class="fa-brands fa-github"></i
                 ></a>
