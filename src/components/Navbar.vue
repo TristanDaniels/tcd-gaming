@@ -3,7 +3,7 @@
     <div class="container-lg">
       <!-- navbar brand / title -->
       <a class="navbar-brand" href="#intro">
-        <span class="text-dark fw-bold"> TCD Gaming </span>
+        <span class="fw-bold"> TCD Gaming </span>
       </a>
       <!-- toggle button for mobile nav -->
       <button
@@ -47,11 +47,13 @@ export default {
   justify-content: center;
   align-items: center;
   top: 0;
+  color: white;
+  background-color: #26272b;
 }
 
 nav a {
   font-weight: bold;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
