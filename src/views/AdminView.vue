@@ -146,14 +146,12 @@
 <script>
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
-import Account from "./Account.vue";
-import EditModal from "../components/EditModal.vue";
+import Admin from "../components/Admin.vue";
 export default {
   components: {
     Footer,
     Navbar,
-    Account,
-    EditModal,
+    Admin,
   },
   computed: {
     Products() {
