@@ -17,12 +17,6 @@
         >
           <div class="card">
             <img class="car-image" v-bind:src="product.imgURL" alt="" />
-            <!-- <div id="product-info">
-            <h2>{{ product.title }}</h2>
-            <h2>{{ product.price }}</h2>
-          <p>{{ product.quantity }}</p>
-          </div> -->
-            <!-- <p>{{ product.description }}</p>-->
             <div class="button">
               <a> See more </a>
             </div>
@@ -36,8 +30,9 @@
 <script>
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
-
+import Products from "../components/Products.vue";
 export default {
+  name: "Products",
   data() {
     return {
       products: null,
@@ -46,6 +41,7 @@ export default {
   components: {
     Footer,
     Navbar,
+    Products,
   },
 
   mounted() {
