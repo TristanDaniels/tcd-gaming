@@ -56,7 +56,7 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #0d6efd;
+  color: rgb(219, 0, 219);
 }
 @media screen and (max-width: 768px) {
   nav a {
