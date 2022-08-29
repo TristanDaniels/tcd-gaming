@@ -41,16 +41,15 @@
       <div>
         <h2 class="mt-4 fw-bold">Get in touch</h2>
         <p>
-          Feel free to contact me with the information provided below. I will
-          try to respond to queries and possible collaborations as fast as
-          possible. I look forward to working with you.
+          Feel free to contact us with the information provided below. We will
+          try to respond to queries as fast as possible. Happy Gaming!
         </p>
       </div>
       <diV class="communication pb-3">
         <ul>
-          <li>Cape Town</li>
-          <li>+27 65 863 4549</li>
-          <li>tcdgaming@gmail.com</li>
+          <li><i class="fa-solid fa-location-dot pe-2"></i>Cape Town</li>
+          <li><i class="fa-solid fa-phone pe-2"></i>+27 65 863 4549</li>
+          <li><i class="fa-solid fa-envelope pe-2"></i>tcdgaming@gmail.com</li>
         </ul>
       </diV>
       <div class="socials">
