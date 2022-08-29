@@ -45,6 +45,13 @@ export default {};
   color: white;
   text-shadow: 1px 4px 8px black;
 }
+#formData {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
 #emailHelp {
   color: rgb(194, 189, 189);
 }
