@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" data-aos="fade-up" data-aos-offset="500">
+  <section id="contact">
     <div class="form ps-4 pe-4 pt-4 pb-4 fw-bold">
       <h2 class="fw-bold">Contact me</h2>
       <form class="form" action="https://formspree.io/f/xjvlagle" method="POST">
@@ -31,9 +31,7 @@
           <textarea class="form-control"></textarea>
         </div>
         <div id="btn" class="btn-container d-flex justify-content-center">
-          <button type="submit" class="button btn btn-primary fw-bold">
-            Submit
-          </button>
+          <button type="submit" class="button btn fw-bold">Submit</button>
         </div>
       </form>
     </div>
@@ -77,7 +75,7 @@ export default {
 };
 </script>
 <style scoped>
-section {
+#contact {
   background-image: url(https://i.postimg.cc/7LFW5ZDg/Contact.jpg);
   color: white;
   text-shadow: 1px 4px 8px black;
