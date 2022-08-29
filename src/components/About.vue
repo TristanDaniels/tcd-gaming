@@ -2,7 +2,7 @@
   <section id="about">
     <h1 class="mt-4 mb-4">About</h1>
     <h5 class="ms-4 me-4">
-      It all started in August 2022. 3 years after the infamous covid-19 plagued
+      It all started in August 2022. 3 years after the infamous COVID-19 plagued
       the world. Gaming was a real escape from reality during those dark times
       and it really inspired our owner Tristan Daniels. Tristan used gaming as a
       getaway, a retreat and a distraction from the real world. I'm sure there
