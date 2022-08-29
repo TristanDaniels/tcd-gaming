@@ -79,6 +79,8 @@ export default {
   background-image: url(https://i.postimg.cc/7LFW5ZDg/Contact.jpg);
   color: white;
   text-shadow: 1px 4px 8px black;
+  background-attachment: fixed;
+  background-size: cover;
 }
 #contact {
   display: flex;

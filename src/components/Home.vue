@@ -23,7 +23,6 @@ export default {};
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
 }
 #landing h1,
 #landing h3 {

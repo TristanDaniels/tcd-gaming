@@ -32,6 +32,7 @@
           ><i class="fa-solid fa-cart-shopping"></i
         ></router-link>
         <router-link class="me-2" to="/register">Register</router-link>
+        <router-link class="me-2" to="/login">Login</router-link>
       </div>
     </div>
   </nav>

@@ -26,9 +26,12 @@ export default {};
 </script>
 <style>
 #login {
-  background-image: url(https://i.postimg.cc/mZS2L3HG/Login.jpg);
+  background-image: url(https://i.postimg.cc/PqjpPX2L/Login.jpg);
   color: white;
   text-shadow: 1px 4px 8px black;
+  background-attachment: fixed;
+  height: 60vh;
+  background-size: cover;
 }
 #formData {
   display: flex;

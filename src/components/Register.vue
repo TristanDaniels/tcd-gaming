@@ -44,6 +44,8 @@ export default {};
   background-image: url(https://i.postimg.cc/PqqSn9SL/Register.jpg);
   color: white;
   text-shadow: 1px 4px 8px black;
+  background-attachment: fixed;
+  background-size: cover;
 }
 #formData {
   display: flex;
