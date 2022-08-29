@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <Home />
+</template>
 
 <script>
 // @ is an alias to /src

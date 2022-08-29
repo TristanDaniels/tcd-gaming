@@ -1,31 +1,38 @@
-<template></template>
+<template>
+  <section id="landing">
+    <h1>TCD Gaming</h1>
+    <h3>The place that provides you with the best games</h3>
+  </section>
+</template>
 
 <script>
-export default {
-  name: "Home",
-  props: {
-    msg: String,
-  },
-};
+export default {};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-* {
-  background-color: #26272b;
+#landing {
+  background-image: url(https://i.postimg.cc/13H3V9RV/Home.jpg);
+  background-size: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+#landing h1,
+#landing h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  text-shadow: 1px 4px 8px black;
 }
 </style>
