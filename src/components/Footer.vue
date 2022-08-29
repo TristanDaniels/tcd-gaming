@@ -108,7 +108,7 @@ export default {};
   color: #737373;
 }
 .footer a:hover {
-  color: #3366cc;
+  color: rgb(219, 0, 219);
   text-decoration: none;
 }
 .footer-links {
@@ -124,7 +124,7 @@ export default {};
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: #3366cc;
+  color: rgb(219, 0, 219);
   text-decoration: none;
 }
 .footer-links.inline li {
@@ -194,7 +194,7 @@ export default {};
 .social-icons a:focus,
 .social-icons a:hover {
   color: rgb(0, 0, 0);
-  background-color: #fff;
+  background-color: rgb(219, 0, 219);
 }
 .social-icons.size-sm a {
   line-height: 34px;

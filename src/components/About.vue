@@ -61,6 +61,6 @@ export default {};
   text-shadow: 1px 4px 8px black;
 }
 .layer {
-  opacity: 0.9;
+  opacity: 1;
 }
 </style>

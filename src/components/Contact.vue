@@ -1,11 +1,6 @@
 <template>
-  <section
-    id="contact"
-    data-aos="fade-up"
-    data-aos-offset="500"
-    class="container"
-  >
-    <div class="form">
+  <section id="contact" data-aos="fade-up" data-aos-offset="500">
+    <div class="form ps-4 pe-4 pt-4 pb-4">
       <h2>Contact me</h2>
       <form class="form" action="https://formspree.io/f/xjvlagle" method="POST">
         <div class="mb-3">
@@ -40,9 +35,9 @@
         </div>
       </form>
     </div>
-    <div class="text-container">
+    <div class="text-container pe-4">
       <div>
-        <h2>Get in touch</h2>
+        <h2 class="mt-4">Get in touch</h2>
         <p>
           Feel free to contact me with the information provided below. I will
           try to respond to queries and possible collaborations as fast as
@@ -53,7 +48,7 @@
         <ul>
           <li>Cape Town</li>
           <li>+27 65 863 4549</li>
-          <li>tristandaniels07@gmail.com</li>
+          <li>tcdgaming@gmail.com</li>
         </ul>
       </diV>
       <div class="socials">
@@ -72,11 +67,6 @@
       </div>
     </div>
   </section>
-  <footer id="footer">
-    <p class="footer-text">
-      <small>© Copyright 2022 Made by Tristan Daniels</small>
-    </p>
-  </footer>
 </template>
 <script>
 export default {
@@ -85,7 +75,9 @@ export default {
 </script>
 <style scoped>
 section {
-  margin-bottom: 80px;
+  background-image: url(https://i.postimg.cc/7LFW5ZDg/Contact.jpg);
+  color: white;
+  text-shadow: 1px 4px 8px black;
 }
 #contact {
   display: flex;
@@ -94,6 +86,9 @@ section {
 }
 .form {
   width: 100%;
+}
+.form-text {
+  color: rgb(194, 189, 189);
 }
 #contact h2 {
   display: flex;
@@ -113,6 +108,15 @@ section {
   font-family: sans-serif;
   width: 100%;
 }
+.button {
+  background-color: #737373;
+  border-color: #737373;
+}
+#btn button:hover {
+  background-color: rgb(219, 0, 219);
+  border-color: rgb(219, 0, 219);
+  text-decoration: none;
+}
 .text-container {
   width: 100%;
 }
@@ -120,7 +124,7 @@ section {
   padding-bottom: 10px;
 }
 .text-container p {
-  color: black;
+  color: white;
   font-family: sans-serif;
 }
 .communication {
@@ -143,16 +147,11 @@ ul {
   padding: 10px;
   font-size: 30px;
 }
-#footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: white;
-  background-color: black;
-  padding: 20px;
-  font-weight: bold;
-  bottom: 0;
-  width: 100%;
+.icons i:hover {
+  color: rgb(219, 0, 219);
+}
+.fa-brands {
+  color: #737373;
 }
 @media screen and (max-width: 700px) {
   #contact {
