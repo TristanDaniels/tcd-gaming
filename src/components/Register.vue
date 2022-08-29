@@ -31,7 +31,7 @@
         <input type="date" class="form-control" id="joinDate" />
       </div>
       <div id="button" class="mb-3 btn-container d-flex justify-content-center">
-        <button type="submit" class="button btn mb-3 fw-bold">Sign up</button>
+        <button type="submit" class="button btn fw-bold">Sign up</button>
       </div>
     </form>
   </section>
