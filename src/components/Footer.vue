@@ -1,11 +1,11 @@
 <template>
   <div id="footer">
     <!-- Site footer -->
-    <footer class="footer">
+    <footer class="footer fw-bold">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">
-            <h6>About US</h6>
+            <h6 class="fw-bold">About US</h6>
             <p class="text-justify">
               This is TCD Gaming. The place that provides you with the best
               games.
@@ -13,7 +13,7 @@
           </div>
 
           <div class="col-xs-6 col-md-3">
-            <h6>Quick Links</h6>
+            <h6 class="fw-bold">Quick Links</h6>
             <ul class="footer-links">
               <li><a href="/about">About us</a></li>
               <li>Check out our <a href="/products">Products</a></li>
@@ -23,7 +23,7 @@
             </ul>
           </div>
           <div class="col-xs-6 col-md-3">
-            <h6>Contact Us</h6>
+            <h6 class="fw-bold">Contact Us</h6>
             <ul class="footer-links">
               <li>Send us a <a href="/contact">message</a></li>
               <li>

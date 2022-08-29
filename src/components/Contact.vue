@@ -1,7 +1,7 @@
 <template>
   <section id="contact" data-aos="fade-up" data-aos-offset="500">
-    <div class="form ps-4 pe-4 pt-4 pb-4">
-      <h2>Contact me</h2>
+    <div class="form ps-4 pe-4 pt-4 pb-4 fw-bold">
+      <h2 class="fw-bold">Contact me</h2>
       <form class="form" action="https://formspree.io/f/xjvlagle" method="POST">
         <div class="mb-3">
           <label class="form-label">Name</label>
@@ -31,13 +31,15 @@
           <textarea class="form-control"></textarea>
         </div>
         <div id="btn" class="btn-container d-flex justify-content-center">
-          <button type="submit" class="button btn btn-primary">Submit</button>
+          <button type="submit" class="button btn btn-primary fw-bold">
+            Submit
+          </button>
         </div>
       </form>
     </div>
-    <div class="text-container pe-4">
+    <div class="text-container pe-4 fw-bold">
       <div>
-        <h2 class="mt-4">Get in touch</h2>
+        <h2 class="mt-4 fw-bold">Get in touch</h2>
         <p>
           Feel free to contact me with the information provided below. I will
           try to respond to queries and possible collaborations as fast as

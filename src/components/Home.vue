@@ -1,7 +1,7 @@
 <template>
   <section id="landing">
-    <h1>TCD Gaming</h1>
-    <h3>The place that provides you with the best games</h3>
+    <h1 class="fw-bold">TCD Gaming</h1>
+    <h3 class="fw-bold">The place that provides you with the best games</h3>
   </section>
 </template>
 

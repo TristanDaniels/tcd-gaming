@@ -1,8 +1,8 @@
 <template>
   <div class="layer">
     <section id="about">
-      <h1 class="mt-4 mb-4">About</h1>
-      <h5 class="ms-4 me-4">
+      <h1 class="mt-4 mb-4 fw-bold">About</h1>
+      <h5 class="ms-4 me-4 fw-bold">
         It all started in August 2022. 3 years after the infamous COVID-19
         plagued the world. Gaming was a real escape from reality during those
         dark times and it really inspired our owner Tristan Daniels. Tristan
@@ -14,7 +14,7 @@
         2022 and now we're up and running and providing fellow gamers with the
         best discs in the game!
       </h5>
-      <h5 class="ms-4 me-4 mb-4">
+      <h5 class="ms-4 me-4 mb-4 fw-bold">
         Even though we are a new business we have a lot of employees share the
         same love and knowledge for gaming which gurentees great support and
         service for our fellow gamers because we ourselves have experienced bad
@@ -23,12 +23,12 @@
         store in the world adn we truly appreaciate it if you decide to support
         and join us on our journey.
       </h5>
-      <h5 class="ms-4 me-4 mb-4">
+      <h5 class="ms-4 me-4 mb-4 fw-bold">
         If have any queries or unsure about anything, don't be afraid to contact
         us via our contact page. A member from our support team will gladly be
         at your service.
       </h5>
-      <h5 class="ms-4 me-4 mb-4">Happy Gaming!</h5>
+      <h5 class="ms-4 me-4 mb-4 fw-bold">Happy Gaming!</h5>
     </section>
   </div>
 </template>
