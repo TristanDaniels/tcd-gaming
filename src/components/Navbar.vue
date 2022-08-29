@@ -28,7 +28,9 @@
         <router-link class="me-2" to="/about">About</router-link>
         <router-link class="me-2" to="/products">Products</router-link>
         <router-link class="me-2" to="/contact">Contact</router-link>
-        <router-link class="me-2" to="/cart">Cart</router-link>
+        <router-link class="me-2" to="/cart"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></router-link>
         <router-link class="me-2" to="/admin">Admin</router-link>
       </div>
     </div>
