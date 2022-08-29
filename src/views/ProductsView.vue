@@ -1,49 +1,16 @@
 <template>
-  <div id="products">
-    <Navbar />
-    <div>
-      <h1>Check out our finest car selection:</h1>
-    </div>
-    <div v-if="Products"></div>
-    <div class="row p-5">
-      <div
-        v-for="product in Products"
-        :key="product.product_id"
-        class="product col-sm-4 p-5"
-      >
-        <router-link
-          id="product-link"
-          :to="{ name: 'productDetails', params: { id: product.id } }"
-        >
-          <div class="card">
-            <img class="car-image" v-bind:src="product.imgURL" alt="" />
-            <div class="button">
-              <a> See more </a>
-            </div>
-          </div>
-        </router-link>
-      </div>
-    </div>
-  </div>
-  <Footer />
+  <Products v-for="product in Products" :key="product.id" :product="product" />
 </template>
 <script>
-import Footer from "../components/Footer.vue";
-import Navbar from "../components/Navbar.vue";
 import Products from "../components/Products.vue";
 export default {
   name: "Products",
+  components: { Products },
   data() {
     return {
-      products: null,
+      Products: [],
     };
   },
-  components: {
-    Footer,
-    Navbar,
-    Products,
-  },
-
   mounted() {
     this.$store.dispatch("getproducts");
   },
