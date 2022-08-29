@@ -37,7 +37,7 @@
         </div>
       </form>
     </div>
-    <div class="text-container pe-4 fw-bold">
+    <div class="text-container ps-4 pe-4 fw-bold">
       <div>
         <h2 class="mt-4 fw-bold">Get in touch</h2>
         <p>

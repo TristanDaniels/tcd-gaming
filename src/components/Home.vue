@@ -13,7 +13,7 @@ export default {};
 #landing {
   background-image: url(https://i.postimg.cc/13H3V9RV/Home.jpg);
   background-size: 100%;
-  height: 100vh;
+  height: 74vh;
   background-size: cover;
   display: flex;
   justify-content: center;
