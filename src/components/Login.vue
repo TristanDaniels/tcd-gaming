@@ -30,8 +30,11 @@ export default {};
   color: white;
   text-shadow: 1px 4px 8px black;
   background-attachment: fixed;
-  height: 60vh;
+  height: 80vh;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #formData {
   display: flex;
