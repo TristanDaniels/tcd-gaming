@@ -56,12 +56,14 @@
       <div class="socials">
         <ul>
           <li class="icons">
-            <a href="https://www.linkedin.com/in/tristan-daniels-78425a23a/"
-              ><i class="fa-brands fa-linkedin"></i
+            <a
+              href="https://www.instagram.com/therealtcdgaming/"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i
             ></a>
           </li>
           <li class="icons">
-            <a href="https://github.com/TristanDaniels"
+            <a href="https://github.com/TristanDaniels/tcd-gaming"
               ><i class="fa-brands fa-github"></i>
             </a>
           </li>
@@ -153,7 +155,7 @@ ul {
   color: rgb(219, 0, 219);
 }
 .fa-brands {
-  color: #737373;
+  color: white;
 }
 @media screen and (max-width: 700px) {
   #contact {
