@@ -1,14 +1,24 @@
 <template>
   <section id="register">
     <h2 class="fw-bold pt-4">Register</h2>
-    <form id="formData" class="pt-2 ps-4 pe-4 pb-4 fw-bold">
+    <form
+      @submit.prevent="register"
+      id="formData"
+      class="pt-2 ps-4 pe-4 pb-4 fw-bold"
+    >
       <div class="mb-3">
         <label for="fullname" class="form-label">Full name</label>
-        <input type="fullname" class="form-control" id="fullname" />
+        <input
+          v-model="fullname"
+          type="fullname"
+          class="form-control"
+          id="fullname"
+        />
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email address</label>
         <input
+          v-model="email"
           type="email"
           class="form-control"
           id="email"
@@ -20,15 +30,30 @@
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" />
+        <input
+          v-model="password"
+          type="password"
+          class="form-control"
+          id="password"
+        />
       </div>
       <div class="mb-3">
         <label for="phonenumber" class="form-label">Phone number</label>
-        <input type="phonenumber" class="form-control" id="phonenumber" />
+        <input
+          v-model="phonenumber"
+          type="phonenumber"
+          class="form-control"
+          id="phonenumber"
+        />
       </div>
       <div class="mb-3">
         <label for="joinDate" class="form-label">Join date</label>
-        <input type="date" class="form-control" id="joinDate" />
+        <input
+          v-model="joinDate"
+          type="date"
+          class="form-control"
+          id="joinDate"
+        />
       </div>
       <div id="button" class="mb-3 btn-container d-flex justify-content-center">
         <button type="submit" class="button btn fw-bold">Sign up</button>
@@ -37,7 +62,35 @@
   </section>
 </template>
 <script>
-export default {};
+export default {
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
+  data() {
+    return {
+      fullname: "",
+      email: "",
+      userpassword: "",
+      joinDate: "",
+      userRole: "",
+      phonenumber: "",
+    };
+  },
+  methods: {
+    register() {
+      this.$store.dispatch("register", {
+        fullname: this.fullname,
+        email: this.email,
+        userpassword: this.userpassword,
+        joinDate: this.joinDate,
+        userRole: this.userRole,
+        phonenumber: this.phonenumber,
+      });
+    },
+  },
+};
 </script>
 <style>
 #register {

@@ -1,13 +1,12 @@
 import { createStore } from "vuex";
-
 export default createStore({
   // State is where the data is
   state: {
     //Best to for the data name to be a single version of the array (properties = property)
+    products: null,
     user: null,
     cart: [],
-    product: [],
-    products: [],
+    product: null,
     asc: true,
   },
   // Mutations are used to update state
@@ -42,30 +41,45 @@ export default createStore({
   actions: {
     login: async (context, payload) => {
       const { email, password } = payload;
-      const response = await fetch(
-        `https://tcd-gaming.herokuapp.com/users?email=${email}&password=${password}` //the ${} is tha payload, and will compare the inputs to the original array
-      );
-      const userData = await response.json();
-      console.log(
-        `https://tcd-gaming.herokuapp.com/users?email=${email}&password=${password}`
-      );
-      if (!userData.length) return alert("No user found with these details"); //Lets the user know that if the information put inside does not match the array, an alert will appear
-      context.commit("setUser", userData[0]);
-      // const isAdmin = userData[0].isAdmin;
-      // if (isAdmin === true) {
-      //   // router.push('')
-      // } else {
-      //   router.push("/");
-      // }
-      // console.log(userData);
+
+      fetch("https://tcd-gaming.herokuapp.com/users/login", {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => context.commit("setUser", json.token));
+    },
+    register: async (context, payload) => {
+      const { fullname, email, password, joinDate, phonenumber } = payload;
+
+      fetch("https://tcd-gaming.herokuapp.com/users/register", {
+        method: "POST",
+        body: JSON.stringify({
+          fullname: fullname,
+          email: email,
+          password: password,
+          joinDate: joinDate,
+          phonenumber: phonenumber,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => context.commit("setUser", json));
     },
     getproducts: async (context) => {
       //async (context) must ALWAYS be in
       fetch("https://tcd-gaming.herokuapp.com/products")
         .then((res) => res.json())
-        .then((products) => {
-          context.commit("setproducts", products);
-        }); //sends the changes to the array
+        .then((products) => context.commit("setproducts", products)); //sends the changes to the array
+      // console.log(products);
     },
     getUser: async (context) => {
       fetch("https://tcd-gaming.herokuapp.com/users")
@@ -73,17 +87,13 @@ export default createStore({
         .then((user) => context.commit("setUser", user));
     },
     getSingleproduct: async (context, id) => {
-      fetch("https://tcd-gaming.herokuapp.com/products" + id)
+      fetch("https://tcd-gaming.herokuapp.com/products/" + id)
         .then((res) => res.json())
         .then((product) => context.commit("setSingleproduct", product));
     },
-    getSingleUser: async (context, id) => {
-      fetch("https://tcd-gaming.herokuapp.com/users" + id)
-        .then((res) => res.json())
-        .then((product) => context.commit("setSingleUser", user));
-    },
     createproduct: async (context, product) => {
-      fetch("https://tcd-gaming.herokuapp.com/products", {
+      // console.log(product);
+      fetch("https://tcd-gaming.herokuapp.com/products/", {
         method: "POST",
         body: JSON.stringify(product),
         headers: {
@@ -91,12 +101,14 @@ export default createStore({
         },
       })
         .then((response) => response.json())
-        .then(() => {
-          context.dispatch("getproducts", product);
+        .then((products) => {
+          console.log(products);
+          // context.dispatch("getproducts", product);
         });
     },
-    createUser: async (context, user) => {
-      fetch("https://tcd-gaming.herokuapp.com/users", {
+    createuser: async (context, user) => {
+      // console.log(product);
+      fetch("https://tcd-gaming.herokuapp.com/users/", {
         method: "POST",
         body: JSON.stringify(user),
         headers: {
@@ -104,12 +116,13 @@ export default createStore({
         },
       })
         .then((response) => response.json())
-        .then(() => {
-          context.dispatch("getUsers", user);
+        .then((users) => {
+          console.log(users);
+          // context.dispatch("getusers", user);
         });
     },
     editproduct: async (context, product) => {
-      fetch("https://tcd-gaming.herokuapp.com/products" + id, {
+      fetch("https://tcd-gaming.herokuapp.com/products/" + id, {
         method: "PUT",
         body: JSON.stringify(product),
         headers: {
@@ -121,31 +134,11 @@ export default createStore({
           context.dispatch("getproducts", product);
         });
     },
-    editUser: async (context, user) => {
-      fetch("https://tcd-gaming.herokuapp.com/users" + id, {
-        method: "PUT",
-        body: JSON.stringify(user),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((response) => response.json())
-        .then(() => {
-          context.dispatch("getusers", user);
-        });
-    },
     deleteproduct: async (context, id) => {
-      fetch("https://tcd-gaming.herokuapp.com/products" + id, {
+      fetch("https://tcd-gaming.herokuapp.com/products/" + id, {
         method: "DELETE",
       }).then(() => {
         context.dispatch("getproducts");
-      });
-    },
-    deleteUser: async (context, id) => {
-      fetch("https://tcd-gaming.herokuapp.com/users" + id, {
-        method: "DELETE",
-      }).then(() => {
-        context.dispatch("getUsers");
       });
     },
     addToCart: async (context, id) => {
