@@ -15,18 +15,18 @@
         best discs in the game!
       </h5>
       <h5 class="ms-4 me-4 mb-4 fw-bold">
-        Even though we are a new business we have a lot of employees share the
-        same love and knowledge for gaming which gurentees great support and
-        service for our fellow gamers because we ourselves have experienced bad
-        service and various problems when purchasing games. But we can asure you
-        that we don't strive to disappoint and only strive to be the best game
-        store in the world adn we truly appreaciate it if you decide to support
-        and join us on our journey.
+        Even though we are a new business we have a lot of employees who share
+        the same love and knowledge for gaming which guarantees great support
+        and service for our fellow gamers because we ourselves have experienced
+        bad service and various problems when purchasing games. But we can
+        assure you that we don't strive to disappoint and only strive to be the
+        best game store in the world. We truly appreaciate it if you decide to
+        support and join us on our journey.
       </h5>
       <h5 class="ms-4 me-4 mb-4 fw-bold">
-        If have any queries or unsure about anything, don't be afraid to contact
-        us via our contact page. A member from our support team will gladly be
-        at your service.
+        If have any queries or are unsure about anything, don't be afraid to
+        contact us via our contact page. A member from our support team will
+        gladly be at your service.
       </h5>
       <h5 class="ms-4 me-4 mb-4 fw-bold">Happy Gaming!</h5>
     </section>
