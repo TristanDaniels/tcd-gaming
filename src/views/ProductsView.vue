@@ -3,7 +3,6 @@
 </template>
 <script>
 import Products from "../components/Products.vue";
-import store from "../store";
 export default {
   components: { Products },
   data() {
