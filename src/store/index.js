@@ -6,7 +6,7 @@ export default createStore({
     //Best to for the data name to be a single version of the array (properties = property)
     user: null,
     cart: [],
-    product: null,
+    product: [],
     products: [],
     asc: true,
   },

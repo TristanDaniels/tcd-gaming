@@ -1,5 +1,5 @@
 <template>
-  <Products v-for="product in Products" :key="product.id" :product="product" />
+  <Products v-for="product in products" :key="product.id" :product="product" />
 </template>
 <script>
 import Products from "../components/Products.vue";
@@ -7,14 +7,16 @@ export default {
   components: { Products },
   data() {
     return {
-      Products: [],
+      products: [],
     };
   },
   mounted() {
-    fetch("https://tcd-gaming.herokuapp.com/products")
-      .then((res) => res.json())
-      .then((data) => (this.Properties = data))
-      .catch((err) => console.log(err.message));
+    this.$store.dispatch("getproducts");
+  },
+  computed: {
+    products() {
+      return this.$store.state.products;
+    },
   },
 };
 </script>

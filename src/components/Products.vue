@@ -12,7 +12,18 @@
 </template>
 <script>
 export default {
+  name: "Products",
   props: ["product"],
+
+  mounted() {
+    this.$store.dispatch("getproducts");
+  },
+
+  computed: {
+    Products() {
+      return this.$store.state.products;
+    },
+  },
 };
 </script>
 <style>

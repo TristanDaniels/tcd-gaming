@@ -27,14 +27,14 @@
         <router-link class="me-2" to="/">Home</router-link>
         <router-link class="me-2" to="/about">About</router-link>
         <router-link class="me-2" to="/products">Products</router-link>
-        <router-link class="me-2" to="/contact">Contact</router-link>
         <router-link class="me-2" to="/cart"
           ><i class="fa-solid fa-cart-shopping"></i
         ></router-link>
+        <router-link class="me-2" to="/contact">Contact</router-link>
         <router-link class="me-2" to="/register">Register</router-link>
         <router-link class="me-2" to="/login">Login</router-link>
         <router-link class="me-2" to="/profile"
-          ><i class="fa-solid fa-square-user"></i
+          ><i class="fa-solid fa-user"></i
         ></router-link>
       </div>
     </div>
