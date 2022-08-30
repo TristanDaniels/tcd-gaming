@@ -1,33 +1,35 @@
 <template>
-  <div class="card bg-dark text-light p-3 m-3 shadow-lg">
-    <div class="img-conatiner">
-      <router-link :to="{ name: 'productDetails', params: { id: product.id } }">
-        <img id="img" v-bind:src="product.img" />
-      </router-link>
-    </div>
-
-    <h2>{{ product.title }}</h2>
-    <h2>
-      <i class="fa-solid fa-hand-holding-dollar p-1"></i>{{ product.price }}
-    </h2>
+  <div class="card shadow mb-4">
+    <img
+      :src="product.imgURL"
+      class="car-img mb-4 img-fluid"
+      alt="Picture of product"
+    />
+    <h5 class="text-black">{{ product.title }}</h5>
+    <p>{{ product.price }}</p>
+    <p class="mt-2">{{ product.category }}</p>
   </div>
 </template>
 <script>
 export default {
-  name: "Products",
   props: ["product"],
 };
 </script>
 <style>
 .card {
-  padding: 10px;
-  border-radius: 0 !important;
+  color: black;
+  width: 30%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 1px 1px 8px black;
+  text-align: center;
 }
-#img {
-  width: 20rem;
-  height: auto;
-}
-#property-text {
-  padding: 0.5rem;
+
+.card p {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 </style>
