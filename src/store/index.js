@@ -77,6 +77,11 @@ export default createStore({
         .then((res) => res.json())
         .then((product) => context.commit("setSingleproduct", product));
     },
+    getSingleUser: async (context, id) => {
+      fetch("https://tcd-gaming.herokuapp.com/users" + id)
+        .then((res) => res.json())
+        .then((product) => context.commit("setSingleUser", user));
+    },
     createproduct: async (context, product) => {
       fetch("https://tcd-gaming.herokuapp.com/products", {
         method: "POST",
@@ -88,6 +93,19 @@ export default createStore({
         .then((response) => response.json())
         .then(() => {
           context.dispatch("getproducts", product);
+        });
+    },
+    createUser: async (context, user) => {
+      fetch("https://tcd-gaming.herokuapp.com/users", {
+        method: "POST",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then(() => {
+          context.dispatch("getUsers", user);
         });
     },
     editproduct: async (context, product) => {
@@ -103,11 +121,31 @@ export default createStore({
           context.dispatch("getproducts", product);
         });
     },
+    editUser: async (context, user) => {
+      fetch("https://tcd-gaming.herokuapp.com/users" + id, {
+        method: "PUT",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then(() => {
+          context.dispatch("getusers", user);
+        });
+    },
     deleteproduct: async (context, id) => {
       fetch("https://tcd-gaming.herokuapp.com/products" + id, {
         method: "DELETE",
       }).then(() => {
         context.dispatch("getproducts");
+      });
+    },
+    deleteUser: async (context, id) => {
+      fetch("https://tcd-gaming.herokuapp.com/users" + id, {
+        method: "DELETE",
+      }).then(() => {
+        context.dispatch("getUsers");
       });
     },
     addToCart: async (context, id) => {
