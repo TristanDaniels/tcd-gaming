@@ -72,7 +72,7 @@ export default {
     return {
       fullname: "",
       email: "",
-      userpassword: "",
+      password: "",
       joinDate: "",
       userRole: "",
       phonenumber: "",
@@ -83,7 +83,7 @@ export default {
       this.$store.dispatch("register", {
         fullname: this.fullname,
         email: this.email,
-        userpassword: this.userpassword,
+        password: this.password,
         joinDate: this.joinDate,
         userRole: this.userRole,
         phonenumber: this.phonenumber,
