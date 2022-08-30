@@ -11,18 +11,19 @@
   </div>
 </template>
 <script>
+import store from "@/store";
 export default {
   name: "Products",
   props: ["product"],
-
-  mounted() {
-    this.$store.dispatch("getproducts");
-  },
 
   computed: {
     Products() {
       return this.$store.state.products;
     },
+  },
+
+  mounted() {
+    this.store.dispatch("getproducts");
   },
 };
 </script>

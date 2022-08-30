@@ -1,5 +1,5 @@
-import router from "@/router";
 import { createStore } from "vuex";
+
 export default createStore({
   // State is where the data is
   state: {
