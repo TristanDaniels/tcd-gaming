@@ -63,6 +63,10 @@ nav a {
 nav a.router-link-exact-active {
   color: rgb(219, 0, 219);
 }
+.me-2:hover {
+  color: rgb(219, 0, 219);
+  text-decoration: none;
+}
 @media screen and (max-width: 768px) {
   nav a {
     display: flex;
