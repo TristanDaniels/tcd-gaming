@@ -33,6 +33,9 @@
         ></router-link>
         <router-link class="me-2" to="/register">Register</router-link>
         <router-link class="me-2" to="/login">Login</router-link>
+        <router-link class="me-2" to="/profile"
+          ><i class="fa-solid fa-square-user"></i
+        ></router-link>
       </div>
     </div>
   </nav>
