@@ -1,13 +1,13 @@
 <template>
-  <div class="card shadow mb-4">
+  <div class="card shadow fw-bold">
     <img
       :src="product.imgURL"
-      class="car-img mb-4 img-fluid"
+      class="img mb-4 img-fluid"
       alt="Picture of product"
     />
-    <h5 class="text-black">{{ product.title }}</h5>
-    <p>{{ product.price }}</p>
-    <p class="mt-2">{{ product.category }}</p>
+    <h5 class="fw-bold">{{ product.title }}</h5>
+    <p>R{{ product.price }}</p>
+    <p>{{ product.category }}</p>
   </div>
 </template>
 <script>
@@ -17,13 +17,14 @@ export default {
 </script>
 <style>
 .card {
-  color: black;
+  color: white;
   width: 30%;
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   box-shadow: 1px 1px 8px black;
   text-align: center;
+  background-color: #26272b;
 }
 
 .card p {
@@ -31,5 +32,10 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+.img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
 }
 </style>

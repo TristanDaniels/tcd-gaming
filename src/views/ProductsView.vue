@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="products-container pb-4 pt-4">
     <Products
       v-for="product in products"
       :key="product.id"
@@ -24,4 +24,13 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.products-container {
+  background-image: url(https://i.postimg.cc/RhnQnR6t/Products.jpg);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+</style>
