@@ -25,6 +25,10 @@ export default {
   box-shadow: 1px 1px 8px black;
   text-align: center;
   background-color: #26272b;
+  transition: all 0.6s ease;
+}
+.card:hover {
+  transform: scale(1.02);
 }
 
 .card p {
@@ -33,9 +37,18 @@ export default {
   flex-direction: row;
   justify-content: center;
 }
+.card:hover {
+  color: rgb(219, 0, 219);
+  text-decoration: none;
+}
 .img {
-  width: 500px;
+  width: 100%;
   height: 400px;
   object-fit: cover;
+}
+@media screen and (max-width: 826px) {
+  .card {
+    width: 100%;
+  }
 }
 </style>
