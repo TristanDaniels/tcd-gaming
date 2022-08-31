@@ -1,24 +1,26 @@
 <template>
-  <Products v-for="product in products" :key="product.id" :product="product" />
+  <div>
+    <Products
+      v-for="product in products"
+      :key="product.id"
+      :product="product"
+    />
+  </div>
 </template>
 <script>
 import Products from "../components/Products.vue";
 export default {
+  props: ["product"],
   components: { Products },
-  data() {
-    return {
-      products: [],
-    };
+
+  mounted() {
+    this.$store.dispatch("getproducts");
   },
 
   computed: {
     products() {
       return this.$store.state.products;
     },
-  },
-
-  mounted() {
-    this.$store.dispatch("getproducts");
   },
 };
 </script>

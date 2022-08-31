@@ -3,10 +3,10 @@ export default createStore({
   // State is where the data is
   state: {
     //Best to for the data name to be a single version of the array (properties = property)
-    products: null,
     user: null,
     cart: [],
     product: null,
+    products: null,
     asc: true,
   },
   // Mutations are used to update state
