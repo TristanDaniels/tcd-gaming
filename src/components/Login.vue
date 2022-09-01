@@ -57,7 +57,7 @@ export default {
   // },
 };
 </script>
-<style>
+<style scoped>
 #login {
   background-image: url(https://i.postimg.cc/PqjpPX2L/Login.jpg);
   color: white;

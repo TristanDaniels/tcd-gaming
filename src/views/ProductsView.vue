@@ -1,33 +1,23 @@
 <template>
   <div class="products">
-    <div class="filters">
-      <button class="form-control btn mb-3 me-3 btn-sm" @click="sortByPrice">
-        Sort By Price
-      </button>
-      <select v-model="category">
-        <option value="All" selected>All</option>
-        <option value="Action">Action</option>
-        <option value="Adventure">Adventure</option>
-        <option value="Dessert">Dessert</option>
-        <option value="Drinks">Drink</option>
-        <option value="Sides">Side</option>
+    <div class="filters pt-4">
+      <button class="sort" @click="sortByPrice">Sort By Price</button>
+      <select class="categories" v-model="category">
+        <option class="category" value="All" selected>All</option>
+        <option class="category" value="Action">Action</option>
+        <option class="category" value="Adventure">Adventure</option>
+        <option class="category" value="Sport">Sport</option>
+        <option class="category" value="Racing">Racing</option>
       </select>
       <input
         type="text"
-        class="form-control"
+        class="search fw-bold"
         placeholder="Search..."
         v-model="search"
       />
     </div>
-    <div class="products-container container-fluid pb-4 pt-4">
-      <Products
-        v-for="product in products"
-        :key="product.id"
-        :product="product"
-      />
-    </div>
     <div
-      v-if="filteredItems"
+      v-if="filteredproducts"
       class="products-container container-fluid pb-4 pt-4"
     >
       <Products
@@ -58,12 +48,12 @@ export default {
     products() {
       return this.$store.state.products;
     },
-    filteredItems() {
-      return this.$store.state.items?.filter((item) => {
+    filteredproducts() {
+      return this.$store.state.products?.filter((product) => {
         let isMatch = true;
-        if (!item.name?.toLowerCase().includes(this.search.toLowerCase()))
+        if (!product.title?.toLowerCase().includes(this.search.toLowerCase()))
           isMatch = false;
-        if (this.category !== "All" && item.category !== this.category)
+        if (this.category !== "All" && product.category !== this.category)
           isMatch = false;
         return isMatch;
       });
@@ -78,7 +68,34 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+.sort {
+  font-weight: bold;
+  color: white;
+  background-color: #33353d;
+  border-color: black;
+}
+.sort:hover {
+  background-color: rgb(219, 0, 219);
+}
+.search {
+  font-weight: bold;
+  color: white;
+  background-color: #33353d;
+  border-color: black;
+}
+.categories {
+  font-weight: bold;
+  color: white;
+  background-color: #33353d;
+  border-color: black;
+}
 .products {
   background-image: url(https://i.postimg.cc/RhnQnR6t/Products.jpg);
 }

@@ -15,7 +15,7 @@ export default {
   props: ["product"],
 };
 </script>
-<style>
+<style scoped>
 .card {
   color: white;
   width: 30%;

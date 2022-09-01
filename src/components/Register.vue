@@ -92,7 +92,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 #register {
   background-image: url(https://i.postimg.cc/PqqSn9SL/Register.jpg);
   color: white;
