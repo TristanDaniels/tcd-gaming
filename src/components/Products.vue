@@ -1,4 +1,8 @@
 <template>
+  <!-- <router-link
+    :to="{ name: 'SingleCardView', params: { id: product.id } }"
+    class="link"
+  > -->
   <div class="card shadow fw-bold">
     <img
       :src="product.imgURL"
@@ -9,6 +13,7 @@
     <p>R{{ product.price }}</p>
     <p>{{ product.category }}</p>
   </div>
+  <!-- </router-link> -->
 </template>
 <script>
 export default {
@@ -30,7 +35,9 @@ export default {
 .card:hover {
   transform: scale(1.02);
 }
-
+.link {
+  width: 100%;
+}
 .card p {
   font-family: sans-serif;
   display: flex;

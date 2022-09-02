@@ -4,6 +4,7 @@ export default createStore({
   state: {
     //Best to for the data name to be a single version of the array (properties = property)
     user: null,
+    token: null,
     cart: [],
     product: null,
     products: null,
@@ -22,6 +23,9 @@ export default createStore({
     },
     setUser: (state, user) => {
       state.user = user;
+    },
+    setToken: (state, token) => {
+      state.token = token;
     },
     removeFromCart: (state, cart) => {
       state.cart = cart;
@@ -53,7 +57,24 @@ export default createStore({
         },
       })
         .then((response) => response.json())
-        .then((json) => context.commit("setUser", json.token));
+        .then((json) => {
+          console.log(json);
+          context.commit("setToken", json.token);
+          if (json.token) {
+            fetch("https://tcd-gaming.herokuapp.com/users/users/verify", {
+              method: "GET",
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                "x-auth-token": `${json.token}`,
+              },
+            })
+              .then((response) => response.json())
+              .then((userjson) => {
+                console.log(userjson);
+                context.commit("setUser", userjson.user);
+              });
+          }
+        });
     },
     register: async (context, payload) => {
       const { fullname, email, password, joinDate, phonenumber } = payload;

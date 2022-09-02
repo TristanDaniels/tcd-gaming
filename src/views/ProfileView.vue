@@ -1,5 +1,5 @@
 <template>
-  <Profile />
+  <Profile v-if="user" />
 </template>
 
 <script>
@@ -9,6 +9,11 @@ export default {
   name: "ProfileView",
   components: {
     Profile,
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
   },
 };
 </script>

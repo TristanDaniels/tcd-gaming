@@ -74,7 +74,6 @@ export default {
       email: "",
       password: "",
       joinDate: "",
-      userRole: "",
       phonenumber: "",
     };
   },
@@ -85,7 +84,6 @@ export default {
         email: this.email,
         password: this.password,
         joinDate: this.joinDate,
-        userRole: this.userRole,
         phonenumber: this.phonenumber,
       });
     },
