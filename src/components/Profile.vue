@@ -1,5 +1,9 @@
 <template>
-  <div v-if="user">{{ user.fullname }}</div>
+  <div v-if="user">
+    <div>
+      {{ user.fullname }}
+    </div>
+  </div>
 </template>
 <script>
 export default {
