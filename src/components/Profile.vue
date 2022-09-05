@@ -3,6 +3,9 @@
     <div>
       {{ user.fullname }}
     </div>
+    <div>
+      {{ user.email }}
+    </div>
   </div>
 </template>
 <script>
