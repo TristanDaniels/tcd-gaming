@@ -114,6 +114,7 @@ export default {
 .button {
   background-color: #737373;
   border-color: #737373;
+  color: white;
 }
 #btn button:hover {
   background-color: rgb(219, 0, 219);

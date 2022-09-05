@@ -1,19 +1,19 @@
 <template>
-  <!-- <router-link
+  <router-link
     :to="{ name: 'SingleCardView', params: { id: product.id } }"
     class="link"
-  > -->
-  <div class="card shadow fw-bold">
-    <img
-      :src="product.imgURL"
-      class="img mb-4 img-fluid"
-      alt="Picture of product"
-    />
-    <h5 class="fw-bold">{{ product.title }}</h5>
-    <p>R{{ product.price }}</p>
-    <p>{{ product.category }}</p>
-  </div>
-  <!-- </router-link> -->
+  >
+    <div class="card shadow fw-bold">
+      <img
+        :src="product.imgURL"
+        class="img mb-4 img-fluid"
+        alt="Picture of product"
+      />
+      <h5 class="fw-bold">{{ product.title }}</h5>
+      <p>R{{ product.price }}</p>
+      <p>{{ product.category }}</p>
+    </div>
+  </router-link>
 </template>
 <script>
 export default {

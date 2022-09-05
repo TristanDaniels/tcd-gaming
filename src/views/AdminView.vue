@@ -1,6 +1,5 @@
 <template>
   <section id="admin">
-    <Navbar />
     <div class="heading">
       <h1>PRODUCTS ADMIN PAGE</h1>
     </div>
@@ -25,7 +24,9 @@
       <div class="modal-dialog">
         <div class="modal-content p-2">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Create A New Car</h5>
+            <h5 class="modal-title" id="exampleModalLabel">
+              Create A New Product
+            </h5>
             <button
               type="button"
               class="btn-close"
@@ -88,7 +89,7 @@
                 class="btn btn-outline-dark"
                 @click="createproduct"
               >
-                Create Car
+                Create Product
               </button>
             </form>
           </div>
@@ -111,46 +112,38 @@
       </thead>
       <tbody>
         <tr>
-          <div v-if="Products"></div>
-          <div v-for="product in Products" :key="product.product_id">
-            <div class="row">
-              <td scope="col-1">{{ product.id }}</td>
-              <td scope="col-1">{{ product.title }}</td>
-              <td scope="col-1">{{ product.category }}</td>
-              <td scope="col-1">{{ product.description }}</td>
-              <td scope="col-1">{{ product.imgURL }}</td>
-              <td scope="col-1">{{ product.price }}</td>
-              <td scope="col-1">{{ product.qauntity }}</td>
-              <td scope="col-1">{{ product.category }}</td>
-              <td scope="col-1">
-                <button type="btn">
-                  <i
-                    title="Edit"
-                    class="bi bi-pencil-square"
-                    id="edit"
-                    @click="toggleModal"
-                  ></i>
-                </button>
-                <button type="btn" @click="deleteproduct">
-                  <i class="fa-solid fa-trash-can"></i>
-                </button>
-              </td>
+          <!-- <div v-if="Products"></div> -->
+          <div v-for="product in Products" :key="product.id">
+            <div class="flex-row">
+              <tr>
+                <td scope="col-1">{{ product.id }}</td>
+                <td scope="col-1">{{ product.title }}</td>
+                <td scope="col-1">{{ product.category }}</td>
+                <td scope="col-1">{{ product.description }}</td>
+                <td scope="col-1">{{ product.imgURL }}</td>
+                <td scope="col-1">{{ product.price }}</td>
+                <td scope="col-1">{{ product.qauntity }}</td>
+                <td scope="col-1">{{ product.category }}</td>
+                <td scope="col-1">
+                  <button type="btn" @click="toggleModal">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                  <button type="btn" @click="deleteproduct">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </button>
+                </td>
+              </tr>
             </div>
           </div>
         </tr>
       </tbody>
     </table>
-    <Footer />
   </section>
 </template>
 <script>
-import Footer from "../components/Footer.vue";
-import Navbar from "../components/Navbar.vue";
 import Admin from "../components/Admin.vue";
 export default {
   components: {
-    Footer,
-    Navbar,
     Admin,
   },
   computed: {

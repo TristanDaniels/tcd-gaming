@@ -1,5 +1,6 @@
 <template>
   <div v-if="product" class="container">
+    <div v-for="product in product" :key="product.id" :product="product"></div>
     <div class="card shadow mb-3">
       <img
         :src="product.imgURL"

@@ -1,5 +1,10 @@
 <template>
-  <section id="login">
+  <section v-if="user">
+    <div>
+      {{ user.fullname }}
+    </div>
+  </section>
+  <section id="login" v-else>
     <h2 class="fw-bold pt-4">Login</h2>
     <form
       @submit.prevent="login"
