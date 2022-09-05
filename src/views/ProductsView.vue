@@ -80,6 +80,7 @@ export default {
   color: white;
   background-color: #33353d;
   border-color: black;
+  transition: all 0.6s ease;
 }
 .sort:hover {
   background-color: rgb(219, 0, 219);
@@ -112,6 +113,14 @@ export default {
 @media screen and (max-width: 826px) {
   .products-container {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 550px) {
+  .filters {
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 </style>

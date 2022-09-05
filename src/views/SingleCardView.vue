@@ -1,22 +1,23 @@
 <template>
   <div v-if="product" class="container">
-    <div v-for="product in product" :key="product.id" :product="product"></div>
-    <div class="card shadow mb-3">
-      <img
-        :src="product.imgURL"
-        class="car-img mb-2"
-        alt="Picture of product"
-      />
-      <h5 class="text-black">{{ product.title }}</h5>
-      <p class="text-secondary">
-        {{ product.category }}
-      </p>
-      <p>{{ product.description }}</p>
-      <p>R{{ product.price }}</p>
-      <button @click="addToCart(product)" class="btn mb-3">
-        <i class="fa-solid fa-cart-arrow-down"></i>
-        <span class="btn2">Add</span>
-      </button>
+    <div v-for="product in product" :key="product.id" :product="product">
+      <div class="card shadow mb-3">
+        <img
+          :src="product.imgURL"
+          class="car-img mb-2"
+          alt="Picture of product"
+        />
+        <h5 class="text-black">{{ product.title }}</h5>
+        <p class="text-secondary">
+          {{ product.category }}
+        </p>
+        <p>{{ product.description }}</p>
+        <p>R{{ product.price }}</p>
+        <button @click="addToCart(product)" class="btn mb-3">
+          <i class="fa-solid fa-cart-arrow-down"></i>
+          <span class="btn2">Add</span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +35,9 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch("getSingleproduct", this.id);
+    fetch("https://tcd-gaming.herokuapp.com/products/" + this.$route.params.id)
+      .then((res) => res.json())
+      .then((data) => (this.product = data));
   },
 };
 </script>

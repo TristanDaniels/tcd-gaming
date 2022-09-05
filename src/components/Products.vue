@@ -1,19 +1,21 @@
 <template>
-  <router-link
-    :to="{ name: 'SingleCardView', params: { id: product.id } }"
-    class="link"
-  >
-    <div class="card shadow fw-bold">
-      <img
-        :src="product.imgURL"
-        class="img mb-4 img-fluid"
-        alt="Picture of product"
-      />
-      <h5 class="fw-bold">{{ product.title }}</h5>
-      <p>R{{ product.price }}</p>
-      <p>{{ product.category }}</p>
-    </div>
-  </router-link>
+  <div class="card shadow fw-bold">
+    <img
+      :src="product.imgURL"
+      class="img mb-4 img-fluid"
+      alt="Picture of product"
+    />
+    <h5 class="fw-bold">{{ product.title }}</h5>
+    <p>R{{ product.price }}</p>
+    <p>{{ product.category }}</p>
+    <router-link
+      :to="{ name: 'SingleCardView', params: { id: product.id } }"
+      class="link"
+      ><button type="submit" class="button btn fw-bold">
+        View product
+      </button></router-link
+    >
+  </div>
 </template>
 <script>
 export default {
@@ -30,9 +32,8 @@ export default {
   box-shadow: 1px 1px 8px black;
   text-align: center;
   background-color: #26272b;
-  transition: all 0.6s ease;
 }
-.card:hover {
+.button:hover {
   transform: scale(1.02);
 }
 .link {
@@ -44,9 +45,17 @@ export default {
   flex-direction: row;
   justify-content: center;
 }
-.card:hover {
-  color: rgb(219, 0, 219);
+.button:hover {
+  background-color: rgb(219, 0, 219);
+  border-color: rgb(219, 0, 219);
   text-decoration: none;
+}
+.button {
+  background-color: #737373;
+  border-color: #737373;
+  color: white;
+  margin-bottom: 20px;
+  transition: all 0.6s ease;
 }
 .img {
   width: 100%;
