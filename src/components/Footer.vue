@@ -18,7 +18,7 @@
               <li><a href="/about">About us</a></li>
               <li>Check out our <a href="/products">Products</a></li>
               <li>
-                Don't have an account ? Register <a href="/register">here</a>
+                Don't have an account? Register <a href="/register">here</a>
               </li>
             </ul>
           </div>
