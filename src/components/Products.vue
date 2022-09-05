@@ -55,7 +55,7 @@ export default {
   border-color: #737373;
   color: white;
   margin-bottom: 20px;
-  transition: all 0.6s ease;
+  transition: all 0.4s ease;
 }
 .img {
   width: 100%;
