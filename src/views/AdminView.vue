@@ -73,9 +73,9 @@
               <textarea
                 name="description"
                 id="description"
-                cols="5"
+                cols="52"
                 rows="10"
-                placeholder="Description of your car"
+                placeholder="Description of your product"
                 v-model="description"
               ></textarea>
               <button
@@ -173,7 +173,14 @@ export default {
       return this.$store.state.product;
     },
     editproduct(id) {
-      return this.$store.dispatch("editproduct", id);
+      return this.$store.dispatch("editproduct", id, {
+        title: this.title,
+        category: this.category,
+        description: this.description,
+        imgURL: this.imgURL,
+        price: this.price,
+        quantity: this.quantity,
+      });
     },
 
     deleteproduct(id) {
@@ -187,8 +194,9 @@ export default {
 </script>
 <style scoped>
 #admin {
-  background-color: #0a0908;
+  background-color: #26272b;
   color: white;
+  margin-bottom: -20px;
 }
 .heading {
   padding-top: 4rem;
