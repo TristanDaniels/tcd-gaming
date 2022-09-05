@@ -1,12 +1,12 @@
 <template>
   <section id="admin">
     <div class="heading">
-      <h1>PRODUCTS ADMIN PAGE</h1>
+      <h2 class="fw-bold">PRODUCTS ADMIN PAGE</h2>
     </div>
     <!-- Button trigger modal -->
     <button
       type="button"
-      class="btn btn-outline-light"
+      class="btn btn-outline-light fw-bold"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
@@ -39,18 +39,18 @@
               <input
                 type="text"
                 id="title-add"
-                placeholder="Car Name"
+                placeholder="Product Name"
                 v-model="title"
               />
               <input
                 type="text"
                 id="address-add"
-                placeholder="Car Name"
+                placeholder="Product Name"
                 v-model="category"
               />
               <input
                 type="url"
-                placeholder="https://picsum.photos/300/400"
+                placeholder="Image URL"
                 id="imageURL-add"
                 v-model="imgURL"
               />
@@ -66,13 +66,14 @@
               <input
                 v-model="quantity"
                 class="form form-sm"
+                placeholder="Quantity"
                 aria-label=".form-sm example"
                 id="quantity-add"
               />
               <textarea
                 name="description"
                 id="description"
-                cols="57"
+                cols="5"
                 rows="10"
                 placeholder="Description of your car"
                 v-model="description"
@@ -97,7 +98,7 @@
       </div>
     </div>
 
-    <table class="table dark text-secondary">
+    <table class="table dark text-white fw-bold">
       <thead>
         <tr>
           <th scope="col">ID</th>
@@ -108,33 +109,28 @@
           <th scope="col">PRICE</th>
           <th scope="col">QTY</th>
           <th scope="col">EDIT</th>
+          <th scope="col">DELETE</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <!-- <div v-if="Products"></div> -->
-          <div v-for="product in Products" :key="product.id">
-            <div class="flex-row">
-              <tr>
-                <td scope="col-1">{{ product.id }}</td>
-                <td scope="col-1">{{ product.title }}</td>
-                <td scope="col-1">{{ product.category }}</td>
-                <td scope="col-1">{{ product.description }}</td>
-                <td scope="col-1">{{ product.imgURL }}</td>
-                <td scope="col-1">{{ product.price }}</td>
-                <td scope="col-1">{{ product.qauntity }}</td>
-                <td scope="col-1">{{ product.category }}</td>
-                <td scope="col-1">
-                  <button type="btn" @click="toggleModal">
-                    <i class="bi bi-pencil-square"></i>
-                  </button>
-                  <button type="btn" @click="deleteproduct">
-                    <i class="fa-solid fa-trash-can"></i>
-                  </button>
-                </td>
-              </tr>
-            </div>
-          </div>
+        <tr v-for="product in Products" :key="product.id">
+          <td scope="col-1">{{ product.id }}</td>
+          <td scope="col-1">{{ product.title }}</td>
+          <td scope="col-1">{{ product.category }}</td>
+          <td scope="col-1">{{ product.description }}</td>
+          <td scope="col-1">{{ product.imgURL }}</td>
+          <td scope="col-1">{{ product.price }}</td>
+          <td scope="col-1">{{ product.quantity }}</td>
+          <td scope="col-1">
+            <button type="btn" @click="toggleModal">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+          </td>
+          <td>
+            <button type="btn" @click="deleteproduct">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>

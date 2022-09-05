@@ -1,7 +1,204 @@
 <template>
-  <div></div>
+  <body>
+    <div class="wrapper">
+      <h1>Shopping Cart</h1>
+      <div class="project">
+        <div class="shop">
+          <div class="box">
+            <div class="content">
+              <div v-for="item of cartItems" :key="item.id">
+                <img :src="item.image" class="mb-2" alt="food" />
+                <h3>{{ item.name }}</h3>
+                <p class="color-secondary">{{ item.category }}</p>
+                <p class="d-flex justify-content- gap-3">
+                  <span>Subtotal: R{{ item.price }}</span>
+                </p>
+                <button @click="deleteFromCart(item.id)" class="btn-area">
+                  <i class="fa fa-trash"></i>
+                  <span class="btn2">Remove</span>
+                </button>
+                <div class="right-bar">
+                  <hr />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="namecart">
+        <span>Total</span> <span>R{{ calculatePrice }}</span>
+      </p>
+      <router-link to="/checkout">Checkout</router-link>
+    </div>
+  </body>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      total: "",
+    };
+  },
+  methods: {
+    deleteFromCart(id) {
+      return this.$store.dispatch("deleteFromCart", id);
+    },
+  },
+
+  computed: {
+    calculatePrice() {
+      return this.$store.state.cart.reduce((accumulator, currentValue) => {
+        return accumulator + parseInt(currentValue.price);
+      }, 0);
+    },
+    cartItems() {
+      return this.$store.state.cart;
+    },
+    item() {
+      return this.$store.state.item;
+    },
+  },
+};
 </script>
-<style></style>
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: montserrat;
+  background: white;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.wrapper h1 {
+  padding: 30px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.project {
+  display: flex;
+}
+.shop {
+  flex: 75%;
+}
+.box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: white;
+  box-shadow: #42b983 (100, 100, 111, 0.2) 0.7px 29px 0;
+}
+.box img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+.content {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+.btn-area {
+  /* position: absolute; */
+  /* bottom: 20px; */
+  right: 20px;
+  padding: 10px 25px;
+  background-color: #42b983;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.btn-area:hover {
+  background-color: #42b983;
+  color: white;
+}
+.unit input {
+  width: 50px;
+  padding: 8px;
+  text-align: center;
+}
+.btn-area i {
+  margin-right: 5px;
+}
+.right-bar {
+  flex: 25%;
+  margin-left: 20px;
+  padding: 20px;
+  height: 100px;
+  background: white;
+  box-shadow: #42b983 (100, 100, 111, 0.2) 0.7px 29px 0;
+}
+.right-bar hr {
+  margin-bottom: 25px;
+}
+.right-bar p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.right-bar a {
+  background-color: #42b983;
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  height: 40px;
+  font-weight: 900;
+}
+.right-bar i {
+  margin-right: 15px;
+}
+.right-bar a:hover {
+  background-color: #42b983;
+}
+
+span {
+  font-size: 25px;
+}
+
+a {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .content h3 {
+    margin-bottom: 15px;
+  }
+  .content h4 {
+    margin-bottom: 20px;
+  }
+  .btn2 {
+    display: none;
+  }
+  .box {
+    height: 150px;
+  }
+  .box img {
+    height: 150px;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .project {
+    flex-direction: column;
+  }
+  .right-bar {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 125px) {
+  .wrapper {
+    max-width: 95%;
+  }
+}
+</style>
