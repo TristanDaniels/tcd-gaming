@@ -28,15 +28,17 @@
           <router-link class="me-2" to="/">Home</router-link>
           <router-link class="me-2" to="/about">About</router-link>
           <router-link class="me-2" to="/products">Products</router-link>
+          <router-link class="me-2" to="/contact">Contact</router-link>
+          <router-link class="me-2" v-if="!user" to="/register"
+            >Register</router-link
+          >
+          <router-link class="me-2" v-if="!user" to="/login">Login</router-link>
           <router-link class="me-2" to="/cart"
             ><i class="fa-solid fa-cart-shopping"></i
           ></router-link>
-          <router-link class="me-2" to="/contact">Contact</router-link>
-          <router-link class="me-2" to="/register">Register</router-link>
-          <router-link class="me-2" to="/login">Login</router-link>
-          <!-- <router-link class="me-2" to="/profile"
-          ><i class="fa-solid fa-user"></i
-        ></router-link> -->
+          <router-link class="me-2" v-if="user" to="/profile"
+            ><i class="fa-solid fa-user"></i
+          ></router-link>
         </div>
       </div>
     </nav>
@@ -45,6 +47,11 @@
 <script>
 export default {
   name: "Navbar",
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
 };
 </script>
 <style scoped>
