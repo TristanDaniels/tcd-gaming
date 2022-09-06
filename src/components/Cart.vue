@@ -1,6 +1,6 @@
 <template>
   <body>
-    <h2 class="fw-bold pt-4">Shopping Cart</h2>
+    <h2 class="fw-bold pt-4 pb-2">Shopping Cart</h2>
     <div class="content">
       <div v-for="product of cartItems" :key="product.id">
         <img
@@ -9,15 +9,14 @@
           alt="picture of game"
         />
         <h3 class="fw-bold">{{ product.title }}</h3>
-        <p class="fw-bold">{{ product.category }}</p>
-        <p class="d-flex justify-content">
-          <span class="fw-bold ps-5">Subtotal: R{{ product.price }}</span>
-        </p>
-        <button @click="deleteFromCart(product.id)" class="btn">
+        <button @click="deleteFromCart(product.id)" class="btn mt-2">
           <span class="btn-sm pe-2 fw-bold"
             ><i class="button fa fa-trash ps-2 pe-2"></i>Remove</span
           >
         </button>
+        <p class="d-flex justify-content">
+          <span class="fw-bold ps-5">Subtotal: R{{ product.price }}</span>
+        </p>
       </div>
     </div>
     <p class="namecart fw-bold">
