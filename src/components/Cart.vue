@@ -13,9 +13,9 @@
         <p class="d-flex justify-content">
           <span class="fw-bold ps-5">Subtotal: R{{ product.price }}</span>
         </p>
-        <button @click="deleteFromCart(product.id)" class="btn fw-bold">
-          <span class="btn-sm pe-2"
-            ><i class="fa fa-trash ps-2 pe-2"></i>Remove</span
+        <button @click="deleteFromCart(product.id)" class="btn">
+          <span class="btn-sm pe-2 fw-bold"
+            ><i class="button fa fa-trash ps-2 pe-2"></i>Remove</span
           >
         </button>
       </div>
@@ -24,7 +24,11 @@
       <span>Grand Total:</span> <span>R{{ calculatePrice }}</span>
     </p>
     <router-link class="router-link" to="/checkout"
-      ><button class="checkout btn mb-2 fw-bold">Checkout</button></router-link
+      ><button
+        class="button btn checkout btn-lg mb-2 fw-bold mb-2 mt-2 pt-2 pb-2"
+      >
+        Checkout
+      </button></router-link
     >
   </body>
 </template>
@@ -72,7 +76,6 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background-color: black;
 }
 .project {
   display: flex;

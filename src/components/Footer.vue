@@ -202,18 +202,6 @@ export default {};
   width: 34px;
   font-size: 14px;
 }
-.social-icons a.linkedin:hover {
-  background-color: #3b5998;
-}
-.social-icons a.codepen:hover {
-  background-color: #00aced;
-}
-.social-icons a.github:hover {
-  background-color: #007bb6;
-}
-.social-icons a.instagram:hover {
-  background-color: #ea4c89;
-}
 @media (max-width: 767px) {
   .social-icons li.title {
     display: block;
