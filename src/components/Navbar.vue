@@ -1,44 +1,46 @@
 <template>
-  <nav id="Navbar" class="navbar navbar-expand-md">
-    <div class="container-lg">
-      <!-- navbar brand / title -->
-      <a class="navbar-brand" href="#intro">
-        <span class="fw-bold"> TCD Gaming </span>
-      </a>
-      <!-- toggle button for mobile nav -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#main-nav"
-        aria-controls="main-nav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"
-          ><i class="fa-solid fa-bars"></i
-        ></span>
-      </button>
-      <!-- navbar links -->
-      <div
-        class="collapse navbar-collapse justify-content-end align-center"
-        id="main-nav"
-      >
-        <router-link class="me-2" to="/">Home</router-link>
-        <router-link class="me-2" to="/about">About</router-link>
-        <router-link class="me-2" to="/products">Products</router-link>
-        <router-link class="me-2" to="/cart"
-          ><i class="fa-solid fa-cart-shopping"></i
-        ></router-link>
-        <router-link class="me-2" to="/contact">Contact</router-link>
-        <router-link class="me-2" to="/register">Register</router-link>
-        <router-link class="me-2" to="/login">Login</router-link>
-        <router-link class="me-2" to="/profile"
+  <section>
+    <nav id="Navbar" class="navbar navbar-expand-md">
+      <div class="container-lg">
+        <!-- navbar brand / title -->
+        <a class="navbar-brand" href="#intro">
+          <span class="fw-bold"> TCD Gaming </span>
+        </a>
+        <!-- toggle button for mobile nav -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><i class="fa-solid fa-bars"></i
+          ></span>
+        </button>
+        <!-- navbar links -->
+        <div
+          class="collapse navbar-collapse justify-content-end align-center"
+          id="main-nav"
+        >
+          <router-link class="me-2" to="/">Home</router-link>
+          <router-link class="me-2" to="/about">About</router-link>
+          <router-link class="me-2" to="/products">Products</router-link>
+          <router-link class="me-2" to="/cart"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></router-link>
+          <router-link class="me-2" to="/contact">Contact</router-link>
+          <router-link class="me-2" to="/register">Register</router-link>
+          <router-link class="me-2" to="/login">Login</router-link>
+          <!-- <router-link class="me-2" to="/profile"
           ><i class="fa-solid fa-user"></i
-        ></router-link>
+        ></router-link> -->
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </section>
 </template>
 <script>
 export default {

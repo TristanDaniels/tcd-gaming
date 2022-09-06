@@ -1,7 +1,7 @@
 <template>
   <section id="contact">
     <div class="form ps-4 pe-4 pt-4 pb-4 fw-bold">
-      <h2 class="fw-bold">Contact me</h2>
+      <h2 class="fw-bold">Contact us</h2>
       <form class="form" action="https://formspree.io/f/xjvlagle" method="POST">
         <div class="mb-3">
           <label class="form-label">Name</label>
@@ -46,8 +46,16 @@
       <diV class="communication pb-3">
         <ul>
           <li><i class="fa-solid fa-location-dot pe-2"></i>Cape Town</li>
-          <li><i class="fa-solid fa-phone pe-2"></i>+27 65 863 4549</li>
-          <li><i class="fa-solid fa-envelope pe-2"></i>tcdgaming@gmail.com</li>
+          <li>
+            <a href="tel:065-863-4549"
+              ><i class="fa-solid fa-phone pe-2"></i>+27 65 863 4549</a
+            >
+          </li>
+          <li>
+            <a href="mailto: tcdgaming@gmail.com">
+              <i class="fa-solid fa-envelope pe-2"></i>tcdgaming@gmail.com
+            </a>
+          </li>
         </ul>
       </diV>
       <div class="socials">
@@ -145,6 +153,13 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: rgb(219, 0, 219);
 }
 .icons {
   display: inline;

@@ -1,37 +1,31 @@
 <template>
   <body>
-    <div class="wrapper">
-      <h1>Shopping Cart</h1>
-      <div class="project">
-        <div class="shop">
-          <div class="box">
-            <div class="content">
-              <div v-for="item of cartItems" :key="item.id">
-                <img :src="item.image" class="mb-2" alt="food" />
-                <h3>{{ item.name }}</h3>
-                <p class="color-secondary">{{ item.category }}</p>
-                <p class="d-flex justify-content- gap-3">
-                  <span>Subtotal: R{{ item.price }}</span>
-                </p>
-                <button @click="deleteFromCart(item.id)" class="btn-area">
-                  <i class="fa fa-trash"></i>
-                  <span class="btn2">Remove</span>
-                </button>
-                <div class="right-bar">
-                  <hr />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <h2 class="fw-bold pt-2">Shopping Cart</h2>
+    <div class="content">
+      <div v-for="product of cartItems" :key="product.id">
+        <img
+          :src="product.imgURL"
+          class="image mb-2 mt-2 ms-2 me-2"
+          alt="picture of game"
+        />
+        <h3 class="fw-bold">{{ product.title }}</h3>
+        <p class="fw-bold">{{ product.category }}</p>
+        <p class="d-flex justify-content">
+          <span class="fw-bold ps-5">Subtotal: R{{ product.price }}</span>
+        </p>
+        <button @click="deleteFromCart(product.id)" class="btn fw-bold">
+          <span class="btn-sm pe-2"
+            ><i class="fa fa-trash ps-2 pe-2"></i>Remove</span
+          >
+        </button>
       </div>
     </div>
-    <div>
-      <p class="namecart">
-        <span>Total</span> <span>R{{ calculatePrice }}</span>
-      </p>
-      <router-link to="/checkout">Checkout</router-link>
-    </div>
+    <p class="namecart fw-bold">
+      <span>Grand Total:</span> <span>R{{ calculatePrice }}</span>
+    </p>
+    <router-link class="router-link" to="/checkout"
+      ><button class="checkout btn mb-2 fw-bold">Checkout</button></router-link
+    >
   </body>
 </template>
 <script>
@@ -69,55 +63,32 @@ export default {
   box-sizing: border-box;
 }
 body {
-  font-family: montserrat;
-  background: white;
-}
-.wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.wrapper h1 {
-  padding: 30px 0;
-  text-align: center;
-  text-transform: uppercase;
+  background: url(https://i.postimg.cc/vms3Th6N/Cart.jpg);
+  color: white;
+  object-fit: cover;
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
 }
 .project {
   display: flex;
+  flex-direction: row;
 }
-.shop {
-  flex: 75%;
-}
-.box {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  margin-bottom: 20px;
-  background: white;
-  box-shadow: #42b983 (100, 100, 111, 0.2) 0.7px 29px 0;
-}
-.box img {
-  width: 300px;
-  height: 200px;
+.image {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
-.content {
-  padding: 20px;
-  position: relative;
-  width: 100%;
-}
-.btn-area {
-  /* position: absolute; */
-  /* bottom: 20px; */
-  right: 20px;
-  padding: 10px 25px;
-  background-color: #42b983;
+.btn-sm {
+  background-color: #33353d;
   color: white;
-  cursor: pointer;
-  border-radius: 10px;
 }
-.btn-area:hover {
-  background-color: #42b983;
+.btn-sm:hover {
+  background-color: rgb(219, 0, 219);
   color: white;
 }
 .unit input {
@@ -128,37 +99,13 @@ body {
 .btn-area i {
   margin-right: 5px;
 }
-.right-bar {
-  flex: 25%;
-  margin-left: 20px;
-  padding: 20px;
-  height: 100px;
-  background: white;
-  box-shadow: #42b983 (100, 100, 111, 0.2) 0.7px 29px 0;
-}
-.right-bar hr {
-  margin-bottom: 25px;
-}
-.right-bar p {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  font-size: 20px;
-}
-.right-bar a {
-  background-color: #42b983;
+.checkout {
+  background-color: #33353d;
   color: white;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  height: 40px;
-  font-weight: 900;
 }
-.right-bar i {
-  margin-right: 15px;
-}
-.right-bar a:hover {
-  background-color: #42b983;
+.checkout:hover {
+  background-color: rgb(219, 0, 219);
+  color: white;
 }
 
 span {
@@ -168,7 +115,14 @@ span {
 a {
   font-size: 20px;
 }
-
+.router-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.router-link:hover {
+  color: rgb(219, 0, 219);
+}
 @media screen and (max-width: 700px) {
   .content h3 {
     margin-bottom: 15px;
@@ -190,10 +144,6 @@ a {
 @media screen and (max-width: 900px) {
   .project {
     flex-direction: column;
-  }
-  .right-bar {
-    margin-left: 0;
-    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 125px) {

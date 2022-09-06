@@ -111,6 +111,8 @@ export default createStore({
       fetch("https://tcd-gaming.herokuapp.com/products/" + id)
         .then((res) => res.json())
         .then((product) => context.commit("setSingleproduct", product));
+      console.log(product);
+      [];
     },
     createproduct: async (context, product) => {
       // console.log(product);
