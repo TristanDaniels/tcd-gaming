@@ -14,8 +14,8 @@
         <p class="description">{{ product.description }}</p>
         <p>R{{ product.price }}</p>
         <button @click="addToCart(product)" class="btn mb-3">
-          <i class="fa-solid fa-cart-arrow-down"></i>
-          <span class="btn-sm">Add</span>
+          <span class="btn-sm">Add to</span>
+          <i class="fa-solid fa-cart-shopping"></i>
         </button>
       </div>
     </div>
