@@ -99,6 +99,12 @@ export default {
 }
 .products {
   background-image: url(https://i.postimg.cc/RhnQnR6t/Products.jpg);
+  object-fit: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 .products-container {
   display: flex;

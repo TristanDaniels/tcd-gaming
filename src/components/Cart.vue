@@ -1,6 +1,6 @@
 <template>
   <body>
-    <h2 class="fw-bold pt-2">Shopping Cart</h2>
+    <h2 class="fw-bold pt-4">Shopping Cart</h2>
     <div class="content">
       <div v-for="product of cartItems" :key="product.id">
         <img
