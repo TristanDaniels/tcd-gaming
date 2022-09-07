@@ -61,7 +61,7 @@ export default {};
   text-shadow: 1px 4px 8px black;
 }
 #about h1 {
-  padding-top: 5rem;
+  padding-top: 4.5rem;
 }
 .layer {
   opacity: 1;

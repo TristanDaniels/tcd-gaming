@@ -99,7 +99,7 @@ export default {
   background-size: cover;
 }
 .heading {
-  padding-top: 6.5rem;
+  padding-top: 6rem;
 }
 #formData {
   display: flex;
