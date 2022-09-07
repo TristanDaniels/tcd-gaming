@@ -39,6 +39,7 @@
           <router-link class="me-2" v-if="user" to="/profile"
             ><i class="fa-solid fa-user"></i
           ></router-link>
+          <router-link class="me-2" v-if="user" to="/admin">Admin</router-link>
         </div>
       </div>
     </nav>

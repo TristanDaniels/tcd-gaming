@@ -150,6 +150,7 @@ export default createStore({
         body: JSON.stringify(product),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
+          "x-auth-token": context.state.token,
         },
       })
         .then((response) => response.json())
@@ -158,8 +159,12 @@ export default createStore({
         });
     },
     deleteproduct: async (context, id) => {
-      fetch("https://tcd-gaming.herokuapp.com/products/" + id, {
+      fetch("https://tcd-gaming.herokuapp.com/products/products/" + id, {
         method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          "x-auth-token": context.state.token,
+        },
       }).then(() => {
         context.dispatch("getproducts");
       });
