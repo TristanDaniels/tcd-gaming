@@ -8,7 +8,6 @@
 <script>
 export default {};
 </script>
-
 <style scoped>
 #landing {
   background-image: url(https://i.postimg.cc/13H3V9RV/Home.jpg);

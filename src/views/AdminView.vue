@@ -1,7 +1,7 @@
 <template>
   <section id="admin">
     <div class="heading">
-      <h2 class="fw-bold">PRODUCTS ADMIN PAGE</h2>
+      <h2 class="heading2 fw-bold">PRODUCTS ADMIN PAGE</h2>
     </div>
     <!-- Button trigger modal -->
     <button
@@ -202,5 +202,8 @@ export default {
   padding-top: 4rem;
   padding-bottom: 2rem;
   border: 1px 1px 1px 1px white;
+}
+.heading2 {
+  margin-top: 4rem;
 }
 </style>
