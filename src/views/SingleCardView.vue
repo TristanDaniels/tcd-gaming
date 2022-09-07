@@ -60,7 +60,7 @@ export default {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  padding-top: 20px;
+  padding-top: 6rem;
 }
 a {
   text-decoration: none;

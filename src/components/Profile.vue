@@ -1,6 +1,6 @@
 <template>
   <div v-if="user">
-    <div>
+    <div class="fullname">
       {{ user.fullname }}
     </div>
   </div>
@@ -14,4 +14,8 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped>
+.fullname {
+  padding-top: 5.5rem;
+}
+</style>

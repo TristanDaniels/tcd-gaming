@@ -64,6 +64,9 @@ export default {
   top: 0;
   color: white;
   background-color: #26272b;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
 nav a {

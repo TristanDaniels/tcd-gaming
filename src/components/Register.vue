@@ -1,6 +1,6 @@
 <template>
   <section id="register">
-    <h2 class="fw-bold pt-4">Register</h2>
+    <h2 class="heading fw-bold">Register</h2>
     <form
       @submit.prevent="register"
       id="formData"
@@ -97,6 +97,9 @@ export default {
   text-shadow: 1px 4px 8px black;
   background-attachment: fixed;
   background-size: cover;
+}
+.heading {
+  padding-top: 6.5rem;
 }
 #formData {
   display: flex;

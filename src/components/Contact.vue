@@ -1,7 +1,7 @@
 <template>
   <section id="contact">
     <div class="form ps-4 pe-4 pt-4 pb-4 fw-bold">
-      <h2 class="fw-bold">Contact us</h2>
+      <h2 class="heading fw-bold pb-2">Contact us</h2>
       <form class="form" action="https://formspree.io/f/xjvlagle" method="POST">
         <div class="mb-3">
           <label class="form-label">Name</label>
@@ -37,7 +37,7 @@
     </div>
     <div class="text-container ps-4 pe-4 fw-bold">
       <div>
-        <h2 class="mt-4 fw-bold">Get in touch</h2>
+        <h2 class="heading2 fw-bold">Get in touch</h2>
         <p>
           Feel free to contact us with the information provided below. We will
           try to respond to queries as fast as possible. Happy Gaming!
@@ -94,6 +94,12 @@ export default {
   display: flex;
   flex-direction: row;
   gap: 30px;
+}
+.heading {
+  padding-top: 4.5rem;
+}
+.heading2 {
+  padding-top: 6rem;
 }
 .form {
   width: 100%;

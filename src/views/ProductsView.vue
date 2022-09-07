@@ -18,7 +18,7 @@
     </div>
     <div
       v-if="filteredproducts"
-      class="products-container container-fluid pb-4 pt-4"
+      class="products-container container-fluid pb-4 pt-3"
     >
       <Products
         v-for="product in filteredproducts"
@@ -69,6 +69,10 @@ export default {
 };
 </script>
 <style scoped>
+.pt-4 {
+  padding-top: 6.5rem !important;
+}
+
 .filters {
   display: flex;
   flex-direction: row;
