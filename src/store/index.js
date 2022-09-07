@@ -115,12 +115,12 @@ export default createStore({
       [];
     },
     createproduct: async (context, product) => {
-      // console.log(product);
       fetch("https://tcd-gaming.herokuapp.com/products/", {
         method: "POST",
         body: JSON.stringify(product),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
+          "x-auth-token": context.state.token,
         },
       })
         .then((response) => response.json())
@@ -130,12 +130,12 @@ export default createStore({
         });
     },
     createuser: async (context, user) => {
-      // console.log(product);
       fetch("https://tcd-gaming.herokuapp.com/users/", {
         method: "POST",
         body: JSON.stringify(user),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
+          "x-auth-token": context.state.token,
         },
       })
         .then((response) => response.json())
