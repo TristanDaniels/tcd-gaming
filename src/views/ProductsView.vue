@@ -116,6 +116,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  align-items: center;
 }
 .form-control {
   width: 30%;

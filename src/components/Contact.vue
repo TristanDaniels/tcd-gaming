@@ -183,5 +183,8 @@ a:hover {
     display: flex;
     flex-direction: column;
   }
+  .heading2 {
+    margin-top: -100px;
+  }
 }
 </style>
