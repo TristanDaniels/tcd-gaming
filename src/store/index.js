@@ -177,7 +177,8 @@ export default createStore({
         },
       })
         .then((response) => response.json())
-        .then(() => {
+        .then((data) => {
+          console.log(data.msg);
           context.dispatch("getusers");
         });
     },

@@ -2,7 +2,7 @@
   <!-- Edit Modal -->
   <div
     class="modal fade"
-    :id="'eUserModal4' + user.id"
+    :id="'eUserModal' + user.id"
     tabindex="-1"
     aria-labelledby="exampleModalLabel4"
     aria-hidden="true"
@@ -24,31 +24,31 @@
               type="text"
               id="fullname-add"
               placeholder="user Name"
-              v-model="fullname"
+              v-model="user.fullname"
             />
             <input
               type="text"
               id="address-add"
               placeholder="user email"
-              v-model="email"
+              v-model="user.email"
             />
             <input
-              type="url"
-              placeholder="Image URL"
-              id="imageURL-add"
-              v-model="userRole"
+              type="text"
+              placeholder="userRole"
+              id="userRole-add"
+              v-model="user.userRole"
             />
             <div>
               <input
                 type="date"
                 id="joinDate-add"
                 placeholder="joinDate"
-                v-model="joinDate"
+                v-model="user.joinDate"
               />
             </div>
 
             <input
-              v-model="phonenumber"
+              v-model="user.phonenumber"
               class="form form-sm"
               placeholder="phonenumber"
               aria-label=".form-sm example"
@@ -58,7 +58,7 @@
               name="text"
               id="cart-add"
               placeholder="cart"
-              v-model="cart"
+              v-model="user.cart"
             ></textarea>
             <button
               type="button"
@@ -67,7 +67,12 @@
             >
               Cancel
             </button>
-            <button type="btn" class="btn btn-outline-dark" @click="edit">
+            <button
+              data-bs-dismiss="modal"
+              type="btn"
+              class="btn btn-outline-dark"
+              @click="edit"
+            >
               Edit user
             </button>
           </form>
