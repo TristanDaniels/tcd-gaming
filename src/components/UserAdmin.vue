@@ -234,6 +234,9 @@ export default {
     users() {
       return this.$store.state.users;
     },
+    // user() {
+    //   return this.$store.state.user;
+    // },
   },
   data() {
     return {

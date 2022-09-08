@@ -4,6 +4,7 @@ export default createStore({
   state: {
     //Best to for the data name to be a single version of the array (properties = property)
     user: null,
+    users: null,
     token: null,
     cart: [],
     product: null,
@@ -21,7 +22,7 @@ export default createStore({
     updateCart: (state, product) => {
       state.cart.push(product);
     },
-    setUser: (state, user) => {
+    setuser: (state, user) => {
       state.user = user;
     },
     setToken: (state, token) => {
@@ -71,8 +72,9 @@ export default createStore({
               .then((response) => response.json())
               .then((userjson) => {
                 console.log(userjson);
-                context.commit("setUser", userjson.user);
+                context.commit("setuser", userjson.user);
               });
+            Swal.fire("", "Logged in successfully", "success");
           }
         });
     },
@@ -91,9 +93,12 @@ export default createStore({
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
-      })
-        .then((response) => response.json())
-        .then((json) => context.commit("setUser", json));
+      }).then((response) => response.json());
+      Swal.fire(
+        "Welcome",
+        "Please refresh the page then login",
+        "success"
+      ).then((json) => context.commit("setuser", json));
     },
     getproducts: async (context) => {
       //async (context) must ALWAYS be in
@@ -102,10 +107,10 @@ export default createStore({
         .then((products) => context.commit("setproducts", products)); //sends the changes to the array
       // console.log(products);
     },
-    getUser: async (context) => {
+    getuser: async (context) => {
       fetch("https://tcd-gaming.herokuapp.com/users")
         .then((res) => res.json())
-        .then((user) => context.commit("setUser", user));
+        .then((user) => context.commit("setuser", user));
     },
     getSingleproduct: async (context, id) => {
       fetch("https://tcd-gaming.herokuapp.com/products/" + id)
@@ -158,6 +163,20 @@ export default createStore({
           context.dispatch("getproducts", product);
         });
     },
+    edituser: async (context, user) => {
+      fetch("https://tcd-gaming.herokuapp.com/users/" + id, {
+        method: "PUT",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          "x-auth-token": context.state.token,
+        },
+      })
+        .then((response) => response.json())
+        .then(() => {
+          context.dispatch("getusers", user);
+        });
+    },
     deleteproduct: async (context, id) => {
       fetch("https://tcd-gaming.herokuapp.com/products/products/" + id, {
         method: "DELETE",
@@ -167,6 +186,17 @@ export default createStore({
         },
       }).then(() => {
         context.dispatch("getproducts");
+      });
+    },
+    deleteuser: async (context, id) => {
+      fetch("https://tcd-gaming.herokuapp.com/products/users/" + id, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          "x-auth-token": context.state.token,
+        },
+      }).then(() => {
+        context.dispatch("getusers");
       });
     },
     addToCart: async (context, id) => {

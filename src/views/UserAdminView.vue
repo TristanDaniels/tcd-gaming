@@ -10,5 +10,8 @@ export default {
   components: {
     UserAdmin,
   },
+  mounted() {
+    return this.$store.dispatch("getusers");
+  },
 };
 </script>
