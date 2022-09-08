@@ -25,6 +25,9 @@ export default createStore({
     setuser: (state, user) => {
       state.user = user;
     },
+    setusers: (state, users) => {
+      state.users = users;
+    },
     setToken: (state, token) => {
       state.token = token;
     },
@@ -74,7 +77,7 @@ export default createStore({
                 console.log(userjson);
                 context.commit("setuser", userjson.user);
               });
-            Swal.fire("", "Logged in successfully", "success");
+            // Swal.fire("", "Logged in successfully", "success");
           }
         });
     },

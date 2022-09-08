@@ -39,7 +39,7 @@
               <input
                 type="text"
                 id="fullname-add"
-                placeholder="user Name"
+                placeholder="fullname"
                 v-model="fullname"
               />
               <input
@@ -49,14 +49,14 @@
                 v-model="email"
               />
               <input
-                type="url"
-                placeholder="Image URL"
-                id="imageURL-add"
+                type="password"
+                placeholder="User Password"
+                id="password-add"
                 v-model="userRole"
               />
               <div>
                 <input
-                  type="number"
+                  type="date"
                   id="joinDate-add"
                   placeholder="joinDate"
                   v-model="joinDate"
@@ -139,7 +139,7 @@
               />
               <div>
                 <input
-                  type="number"
+                  type="date"
                   id="joinDate-add"
                   placeholder="joinDate"
                   v-model="joinDate"
@@ -147,19 +147,17 @@
               </div>
 
               <input
-                v-model="cart"
+                v-model="phonenumber"
                 class="form form-sm"
-                placeholder="cart"
+                placeholder="phonenumber"
                 aria-label=".form-sm example"
-                id="cart-add"
+                id="phonenumber-add"
               />
               <textarea
-                name="password"
-                id="password"
-                cols="52"
-                rows="10"
-                placeholder="password of your user"
-                v-model="password"
+                name="text"
+                id="cart-add"
+                placeholder="cart"
+                v-model="cart"
               ></textarea>
               <button
                 type="button"
@@ -184,9 +182,10 @@
           <th scope="col">fullname</th>
           <th scope="col">email</th>
           <th scope="col">password</th>
-          <th scope="col">IMG</th>
+          <th scope="col">User Role</th>
+          <th scope="col">Phonenumber</th>
           <th scope="col">joinDate</th>
-          <th scope="col">QTY</th>
+          <th scope="col">Cart</th>
           <th scope="col">EDIT</th>
           <th scope="col">DELETE</th>
         </tr>
@@ -198,6 +197,7 @@
           <td scope="col-1">{{ user.email }}</td>
           <td scope="col-1">{{ user.password }}</td>
           <td scope="col-1">{{ user.userRole }}</td>
+          <td scope="col-1">{{ user.phonenumber }}</td>
           <td scope="col-1">{{ user.joinDate }}</td>
           <td scope="col-1">{{ user.cart }}</td>
           <td scope="col-1">
