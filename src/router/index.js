@@ -53,6 +53,11 @@ const routes = [
     name: "productadmin",
     component: () => import("../views/ProductAdminView.vue"),
   },
+  {
+    path: "/useradmin",
+    name: "useradmin",
+    component: () => import("../views/UserAdminView.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -42,6 +42,9 @@
           <router-link class="me-2" v-if="user" to="/productadmin"
             >Product Admin</router-link
           >
+          <router-link class="me-2" v-if="user" to="/useradmin"
+            >User Admin</router-link
+          >
         </div>
       </div>
     </nav>
