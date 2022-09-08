@@ -98,89 +98,6 @@
       </div>
     </div>
 
-    <!-- Add Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal2"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel2"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content p-2">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel2">Edit Product</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form @submit.prevent="editproduct" id="modal-form" class="p-2">
-              <input
-                type="text"
-                id="title-add"
-                placeholder="Product Name"
-                v-model="title"
-              />
-              <input
-                type="text"
-                id="address-add"
-                placeholder="Product Category"
-                v-model="category"
-              />
-              <input
-                type="url"
-                placeholder="Image URL"
-                id="imageURL-add"
-                v-model="imgURL"
-              />
-              <div>
-                <input
-                  type="number"
-                  id="price-add"
-                  placeholder="Price"
-                  v-model="price"
-                />
-              </div>
-
-              <input
-                v-model="quantity"
-                class="form form-sm"
-                placeholder="Quantity"
-                aria-label=".form-sm example"
-                id="quantity-add"
-              />
-              <textarea
-                name="description"
-                id="description"
-                cols="52"
-                rows="10"
-                placeholder="Description of your product"
-                v-model="description"
-              ></textarea>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button
-                type="btn"
-                class="btn btn-outline-dark"
-                @click="editproduct"
-              >
-                Edit Product
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <table class="table dark text-white fw-bold">
       <thead>
         <tr>
@@ -209,7 +126,7 @@
               type="button"
               class="btn btn-outline-light fw-bold"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal2"
+              :data-bs-target="'#eProdModal' + product.id"
             >
               <i class="fa-solid fa-pen-to-square"></i>
             </button>
@@ -219,10 +136,12 @@
               type="btn"
               class="btn btn-outline-light fw-bold"
               @click="deleteproduct(product.id)"
+              data-bs-dismiss="modal"
             >
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </td>
+          <editModal :product="product" />
         </tr>
       </tbody>
     </table>
@@ -230,9 +149,11 @@
 </template>
 <script>
 import ProductAdmin from "./ProductAdmin.vue";
+import editModal from "./EditModalProduct.vue";
 export default {
   components: {
     ProductAdmin,
+    editModal,
   },
   computed: {
     Products() {
