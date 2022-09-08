@@ -109,9 +109,7 @@
       <div class="modal-dialog">
         <div class="modal-content p-2">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel2">
-              Create A New Product
-            </h5>
+            <h5 class="modal-title" id="exampleModalLabel2">Edit Product</h5>
             <button
               type="button"
               class="btn-close"
@@ -207,9 +205,6 @@
           <td scope="col-1">{{ product.price }}</td>
           <td scope="col-1">{{ product.quantity }}</td>
           <td scope="col-1">
-            <!-- <button type="btn" @click="toggleModal">
-              <i class="fa-solid fa-pen-to-square"></i>
-            </button> -->
             <button
               type="button"
               class="btn btn-outline-light fw-bold"
@@ -234,10 +229,10 @@
   </section>
 </template>
 <script>
-import Admin from "../components/Admin.vue";
+import ProductAdmin from "./ProductAdmin.vue";
 export default {
   components: {
-    Admin,
+    ProductAdmin,
   },
   computed: {
     Products() {
