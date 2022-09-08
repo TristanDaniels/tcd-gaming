@@ -77,7 +77,7 @@ export default createStore({
                 console.log(userjson);
                 context.commit("setuser", userjson.user);
               });
-            // Swal.fire("", "Logged in successfully", "success");
+            Swal.fire("", "Logged in successfully", "success");
           }
         });
     },

@@ -98,83 +98,6 @@
       </div>
     </div>
 
-    <!-- Add Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal4"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel4"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content p-2">
-          <div class="modal-header">
-            <h5 class="modal-fullname" id="exampleModalLabel4">Edit user</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form @submit.prevent="edituser" id="modal-form" class="p-2">
-              <input
-                type="text"
-                id="fullname-add"
-                placeholder="user Name"
-                v-model="fullname"
-              />
-              <input
-                type="text"
-                id="address-add"
-                placeholder="user email"
-                v-model="email"
-              />
-              <input
-                type="url"
-                placeholder="Image URL"
-                id="imageURL-add"
-                v-model="userRole"
-              />
-              <div>
-                <input
-                  type="date"
-                  id="joinDate-add"
-                  placeholder="joinDate"
-                  v-model="joinDate"
-                />
-              </div>
-
-              <input
-                v-model="phonenumber"
-                class="form form-sm"
-                placeholder="phonenumber"
-                aria-label=".form-sm example"
-                id="phonenumber-add"
-              />
-              <textarea
-                name="text"
-                id="cart-add"
-                placeholder="cart"
-                v-model="cart"
-              ></textarea>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <button type="btn" class="btn btn-outline-dark" @click="edituser">
-                Edit user
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <table class="table dark text-white fw-bold">
       <thead>
         <tr>
@@ -205,7 +128,7 @@
               type="button"
               class="btn btn-outline-light fw-bold"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal4"
+              :data-bs-target="'#eUserModal' + user.id"
             >
               <i class="fa-solid fa-pen-to-square"></i>
             </button>
@@ -219,6 +142,7 @@
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </td>
+          <editModal :user="user" />
         </tr>
       </tbody>
     </table>
@@ -226,9 +150,11 @@
 </template>
 <script>
 import UserAdmin from "./UserAdmin.vue";
+import editModal from "./EditModalUser.vue";
 export default {
   components: {
     UserAdmin,
+    editModal,
   },
   computed: {
     users() {
