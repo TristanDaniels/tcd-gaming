@@ -107,10 +107,10 @@ export default createStore({
         .then((products) => context.commit("setproducts", products)); //sends the changes to the array
       // console.log(products);
     },
-    getuser: async (context) => {
+    getusers: async (context) => {
       fetch("https://tcd-gaming.herokuapp.com/users")
         .then((res) => res.json())
-        .then((user) => context.commit("setuser", user));
+        .then((users) => context.commit("setusers", users));
     },
     getSingleproduct: async (context, id) => {
       fetch("https://tcd-gaming.herokuapp.com/products/" + id)

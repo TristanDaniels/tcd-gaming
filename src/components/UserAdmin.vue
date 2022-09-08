@@ -8,7 +8,7 @@
       type="button"
       class="btn btn-outline-light fw-bold"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      data-bs-target="#exampleModal3"
     >
       Add user
     </button>
@@ -16,15 +16,15 @@
     <!-- Add Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="exampleModal3"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="exampleModalLabel3"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content p-2">
           <div class="modal-header">
-            <h5 class="modal-fullname" id="exampleModalLabel">
+            <h5 class="modal-fullname" id="exampleModalLabel3">
               Create A New user
             </h5>
             <button
@@ -101,15 +101,15 @@
     <!-- Add Modal -->
     <div
       class="modal fade"
-      id="exampleModal2"
+      id="exampleModal4"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel2"
+      aria-labelledby="exampleModalLabel4"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content p-2">
           <div class="modal-header">
-            <h5 class="modal-fullname" id="exampleModalLabel2">Edit user</h5>
+            <h5 class="modal-fullname" id="exampleModalLabel4">Edit user</h5>
             <button
               type="button"
               class="btn-close"
@@ -205,7 +205,7 @@
               type="button"
               class="btn btn-outline-light fw-bold"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal2"
+              data-bs-target="#exampleModal4"
             >
               <i class="fa-solid fa-pen-to-square"></i>
             </button>
@@ -234,9 +234,6 @@ export default {
     users() {
       return this.$store.state.users;
     },
-    // user() {
-    //   return this.$store.state.user;
-    // },
   },
   data() {
     return {

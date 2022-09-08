@@ -33,7 +33,7 @@
             >Register</router-link
           >
           <router-link class="me-2" v-if="!user" to="/login">Login</router-link>
-          <router-link class="me-2" to="/cart"
+          <router-link class="me-2" v-if="user" to="/cart"
             ><i class="fa-solid fa-cart-shopping"></i
           ></router-link>
           <router-link class="me-2" v-if="user" to="/profile"
