@@ -3,6 +3,9 @@
     <div class="fullname">
       {{ user.fullname }}
     </div>
+    <div>
+      {{ user.email }}
+    </div>
   </div>
 </template>
 <script>
@@ -10,6 +13,9 @@ export default {
   computed: {
     user() {
       return this.$store.state.user;
+    },
+    mounted() {
+      return this.$store.dispatch("getusers");
     },
   },
 };
