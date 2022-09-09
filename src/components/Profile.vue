@@ -1,10 +1,16 @@
 <template>
-  <div v-if="user">
+  <div class="profile" v-if="user">
     <div class="fullname">
       {{ user.fullname }}
     </div>
-    <div>
+    <div class="field">
+      {{ user.userRole }}
+    </div>
+    <div class="field">
       {{ user.phonenumber }}
+    </div>
+    <div class="field">
+      {{ user.joinDate }}
     </div>
   </div>
 </template>
@@ -21,7 +27,16 @@ export default {
 };
 </script>
 <style scoped>
+.profile {
+  background-color: #26272b;
+}
 .fullname {
   padding-top: 5.5rem;
+  color: white;
+  font-weight: bold;
+}
+.field {
+  font-weight: bold;
+  color: white;
 }
 </style>
