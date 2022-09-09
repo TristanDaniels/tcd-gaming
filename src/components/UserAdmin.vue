@@ -65,6 +65,7 @@
               </div>
               <div>
                 <input
+                  type="text"
                   v-model="phonenumber"
                   class="form form-sm"
                   placeholder="phonenumber"
