@@ -194,7 +194,7 @@ export default createStore({
       });
     },
     deleteuser: async (context, id) => {
-      fetch("https://tcd-gaming.herokuapp.com/products/users/" + id, {
+      fetch("https://tcd-gaming.herokuapp.com/users/" + id, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

@@ -52,31 +52,38 @@
                 type="password"
                 placeholder="User Password"
                 id="password-add"
-                v-model="userRole"
+                v-model="password"
               />
               <div>
                 <input
-                  type="date"
-                  id="joinDate-add"
-                  placeholder="joinDate"
-                  v-model="joinDate"
+                  v-model="userRole"
+                  class="form form-sm"
+                  placeholder="user role"
+                  aria-label=".form-sm example"
+                  id="userRole-add"
                 />
               </div>
-
+              <div>
+                <input
+                  v-model="phonenumber"
+                  class="form form-sm"
+                  placeholder="phonenumber"
+                  aria-label=".form-sm example"
+                  id="phonenumber-add"
+                />
+              </div>
               <input
-                v-model="cart"
-                class="form form-sm"
-                placeholder="cart"
-                aria-label=".form-sm example"
-                id="cart-add"
+                type="date"
+                id="joinDate-add"
+                placeholder="joinDate"
+                v-model="joinDate"
               />
               <textarea
-                name="password"
-                id="password"
+                name="cart"
+                id="cart"
                 cols="52"
-                rows="10"
-                placeholder="password of your user"
-                v-model="password"
+                placeholder="cart"
+                v-model="cart"
               ></textarea>
               <button
                 type="button"
