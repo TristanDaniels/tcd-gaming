@@ -4,7 +4,7 @@
       {{ user.fullname }}
     </div>
     <div>
-      {{ user.email }}
+      {{ user.phonenumber }}
     </div>
   </div>
 </template>
