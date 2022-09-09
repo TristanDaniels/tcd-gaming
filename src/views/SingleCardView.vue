@@ -57,8 +57,8 @@ export default {
   text-decoration: none;
 }
 .productIMG {
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
   object-fit: cover;
   padding-top: 6rem;
 }
